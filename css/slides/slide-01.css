@@ -10,7 +10,11 @@
   position: relative;
   background-color: #0a1128;
   color: #ffffff;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   overflow: hidden;
 }
 
@@ -36,7 +40,12 @@
   transform: translate(-20%, -50%);
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(99, 102, 241, 0.12) 40%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.15) 0%,
+    rgba(99, 102, 241, 0.12) 40%,
+    transparent 70%
+  );
   filter: blur(80px);
   z-index: 0;
 }
@@ -92,7 +101,9 @@
   border-radius: 50%;
   padding: 6px;
   background: linear-gradient(135deg, #0ea5e9, #6366f1, #0a1128);
-  box-shadow: 0 0 35px rgba(99, 102, 241, 0.3), 0 0 80px rgba(14, 165, 233, 0.2);
+  box-shadow:
+    0 0 35px rgba(99, 102, 241, 0.3),
+    0 0 80px rgba(14, 165, 233, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,8 +119,13 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 /* ================= 4. COLUNA DIREITA (LOGO + FRASE) ================= */
@@ -190,21 +206,38 @@
   }
 
   /* Desativa brilhos pesados no mobile para fluidez */
-  .slide-01-container::before, .slide-01-container::after { display: none; }
-
-  .slide-01-left { text-align: center; }
-  .slide-01-left .title { font-size: 2.2rem; }
-  .slide-01-left .experience-box { justify-content: center; }
-
-  .slide-01-center { order: -1; } /* Foto no topo no celular */
-  .avatar-gradient-border { width: 200px; height: 200px; }
-
-  .slide-01-right { 
-    align-items: center; 
-    width: 100%; 
+  .slide-01-container::before,
+  .slide-01-container::after {
+    display: none;
   }
-  
-  .company-logo { width: 250px; margin-bottom: 0; }
+
+  .slide-01-left {
+    text-align: center;
+  }
+  .slide-01-left .title {
+    font-size: 2.2rem;
+  }
+  .slide-01-left .experience-box {
+    justify-content: center;
+  }
+
+  .slide-01-center {
+    order: -1;
+  } /* Foto no topo no celular */
+  .avatar-gradient-border {
+    width: 200px;
+    height: 200px;
+  }
+
+  .slide-01-right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .company-logo {
+    width: 250px;
+    margin-bottom: 0;
+  }
 
   .slide-01-right .quote-box {
     width: 100%;
@@ -221,5 +254,62 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+}
+/* ================= 1. BASE (Ajustada para iOS) ================= */
+.slide-01-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 60px;
+  height: 100vh;
+  height: 100dvh; /* Altura dinâmica para Safari Mobile */
+  width: 100vw;
+  position: relative;
+  background-color: #0a1128;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased; /* Suaviza fontes no iPhone */
+}
+
+/* ================= 6. RESPONSIVIDADE (Blindada para Safari) ================= */
+@media (max-width: 768px) {
+  .slide-01-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    padding: 50px 20px;
+    gap: 35px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Scroll suave no iPhone */
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .avatar-gradient-border {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0; /* Impede que o Safari "esmague" a foto */
+  }
+
+  .slide-01-right .quote-box {
+    width: 95%; /* Evita colagem nas bordas laterais */
+    max-width: 100%;
+  }
+
+  .slide-01-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
   }
 }

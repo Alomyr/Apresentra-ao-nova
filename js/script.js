@@ -841,8 +841,9 @@ function createOptimizedImage(src, alt, className = "", lazy = true) {
 
 function coverSlide() {
   return `
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 <div class="slide-01-container">
-    
     <div class="slide-01-left">
         <h1 class="title">
             INSPIRE<br>
@@ -864,37 +865,28 @@ function coverSlide() {
         </div>
         
         <div class="person-info">
-            <p class="role"></p>
             <h3>Igor</h3>
             <span>CEO & Founder - Cachina</span>
         </div>
     </div>
-<div class="slide-01-right">
 
-  <!-- LOGO -->
-  <img src="./icons/cachina-logoo.png" class="company-logo" />
+    <div class="slide-01-right">
+        <img src="./icons/cachina-logoo.png" class="company-logo" />
 
-  <!-- QUOTE -->
-  <div class="quote-box">
-    <img class="quote-bg" src="./icons/fundo.png" alt="">
+        <div class="quote-box">
+            <img class="quote-bg" src="./icons/fundo.png" alt="">
+            <p>
+                "A tecnologia não deve apenas resolver problemas, ela deve inspirar novas formas de pensar o futuro dos negócios."
+            </p>
+        </div>
+    </div>
 
-    <p>
-      "A tecnologia não deve apenas resolver problemas, ela deve inspirar novas formas de pensar o futuro dos negócios."
-    </p>
-  </div>
-
-</div>
-
-</div>
-    
     <div class="slide-01-footer">
         <span>PAGE : 1</span>
         <span>CACHINA PRESENTATION TEMPLATE</span>
-        <span>BUSINESS_20XX</span>
+        <span>BUSINESS_2026</span>
     </div>
-
 </div>
-
  `;
 }
 
