@@ -1,8 +1,4 @@
-/**
- * Nomeclatura dos slides e suas ordem de aparecer
- * NOTE: essas nomeclatura precisa ser auterada e mudar para o padrao do novo modelo reorganizar o fluxo das paginas colocar em rodem de escrita as function
- *
- */
+// Presentation Data
 const slides = [
   { id: 1, title: "Capa", component: "coverSlide" },
   { id: 8, title: "Nossos Valores", component: "valuesSlide" },
@@ -842,66 +838,42 @@ function createOptimizedImage(src, alt, className = "", lazy = true) {
 
   return img;
 }
-/**
- * @notes precisa direcionar para o styles_slide01.css nao para somente para o styles paradao do sistema
- * @returns retorna a capa inicial da apresentaçao
- */
 
-document.getElementById("slide-content").innerHTML = coverSlide();
 function coverSlide() {
   return `
   <div class="slide-01-container">
+                <div class="slide-01-left">
+                    <h1 class="title">HELLO & <br /><span>WELCOME</span></h1>
+                    <p class="subtitle">Our Presentation Template</p>
+                    <div class="year-box"><span>Year</span><strong>36</strong></div>
+                    <div class="experience">Experience.</div>
+                </div>
+                
+                <div class="slide-01-center">
+                    <img src="./icons/igor.png" alt="Profile" />
+                    <div class="person-info">
+                        <p class="role">Plan B</p>
+                        <h3>John Hallward</h3>
+                        <span>CEO & Founder</span>
+                    </div>
+                </div>
 
-    <!-- Lado esquerdo -->
-    <div class="slide-01-left">
-      <h1 class="title">
-        HELLO & <br />
-        <span>WELCOME</span>
-      </h1>
-
-      <p class="subtitle">Our Presentation Template</p>
-
-      <div class="year-box">
-        <span>Year</span>
-        <strong>36</strong>
-      </div>
-
-      <div class="experience">Experience.</div>
-    </div>
-
-    <!-- Centro (imagem) -->
-    <div class="slide-01-center">
-      <img src="./icons/cover-image.png" alt="Profile" />
-      <div class="person-info">
-        <p class="role">Plan B</p>
-        <h3>John Hallward</h3>
-        <span>CEO & Founder</span>
-      </div>
-    </div>
-
-    <!-- Lado direito -->
-    <div class="slide-01-right">
-      <div class="quote">
-        <p>
-          Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-
-      <div class="signature">
-        <p>Best Hallward</p>
-        <span>SIGNATURE HERE</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Rodapé -->
-  <div class="slide-01-footer">
-    <span>PAGE : 2</span>
-    <span>PITCH DECK PRESENTATION TEMPLATE</span>
-    <span>BUSINESS_20XX</span>
-  </div>
-
+                <div class="slide-01-right">
+                    <div class="quote">
+                        <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="signature">
+                        <p>Best Hallward</p>
+                        <span>SIGNATURE HERE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-01-footer">
+                <span>PAGE : 2</span>
+                <span>PITCH DECK PRESENTATION TEMPLATE</span>
+                <span>BUSINESS_20XX</span>
+            </div>
+        </div>
     `;
 }
 

@@ -3,34 +3,15 @@
 This project is apresentation for grup cachina in fotmat playbook slide, host in github pages
 generation imagens of apresentation in contanier html in .js
 
+## Tree Project
+
 ```
 ├── 📁 css
 │   └── 🎨 styles.css
 ├── 📁 html
 │   ├── 🌐 contact-page.html
-│   └── 🌐 slide01.html
+│   └── 🌐 linknabio.html
 ├── 📁 icons
-│   ├── 📁 logos
-│   │   ├── 📄 202007170114_GQUy_.avif
-│   │   ├── 🖼️ Dropped Image (10).png
-│   │   ├── 🖼️ Dropped Image (11).png
-│   │   ├── 🖼️ Dropped Image (12).png
-│   │   ├── 🖼️ Dropped Image (13).png
-│   │   ├── 🖼️ Dropped Image (14).png
-│   │   ├── 🖼️ Dropped Image (2).png
-│   │   ├── 🖼️ Dropped Image (3).png
-│   │   ├── 🖼️ Dropped Image (4).png
-│   │   ├── 🖼️ Dropped Image (5).png
-│   │   ├── 🖼️ Dropped Image (6).png
-│   │   ├── 🖼️ Dropped Image (7).png
-│   │   ├── 🖼️ Dropped Image (8).png
-│   │   ├── 🖼️ Dropped Image (9).png
-│   │   ├── 🖼️ Dropped Image.png
-│   │   ├── 🖼️ Logo_Viva Fotografia.png
-│   │   ├── 🖼️ WhatsApp Image 2026-03-24 at 1.14.22 PM.jpeg
-│   │   ├── 🖼️ WhatsApp Image 2026-03-25 at 10.21.33 AM.jpeg
-│   │   ├── 🖼️ WhatsApp_Image_2026-03-24_at_7.55.22_AM-removebg-preview.png
-│   │   └── 🖼️ logosdeempresas.png
 │   ├── 🖼️ ai-workflow.png
 │   ├── 🖼️ automafacil.png
 │   ├── 🖼️ cachina-cover.png
@@ -62,8 +43,58 @@ generation imagens of apresentation in contanier html in .js
 │   └── 🖼️ qr-code.png
 ├── 📁 js
 │   └── 📄 script.js
-├── ⚙️ .gitignore
+├── 📁 json
+│   ├── ⚙️ Consultoria (1).json
+│   ├── ⚙️ Consultoria-Tecnologia-Negocios copy.json
+│   ├── ⚙️ dkbndlfux.json
+│   ├── ⚙️ sdknjs.json
+│   ├── ⚙️ typebot-orcamento.json
+│   ├── ⚙️ typebot-triagem-completa-emagrecimento.json
+│   └── ⚙️ typebot-triagem-emagrecimento.json
+├── 📁 md 
+│   ├── 📝 CORRECAO-ERRO-IMPORTACAO.md 
+│   ├── 📝 CORRECAO_SCROLL_ESPECIFICO.md
+│   ├── 📝 NAVEGACAO_MOBILE.md
+│   ├── 📝 OTIMIZACOES.md
+│   ├── 📝 OTIMIZACOES_MOBILE_SLIDES.md
+│   ├── 📝 PERSONALIZACAO-RAPIDA.md
+│   └── 📝 RESUMO-FLUXO-ELITEIA.md
 ├── 📝 README.md
-├── 🌐 index.html
-└── 🌐 linknabio.html
+└── 🌐 index.html
 ```
+
+### folders for delet
+
+md
+json
+
+<!-- descartar essa parte quando puder -->
+
+*Automatically synced with your [v0.app](https://v0.app) deployments*
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/artubss-projects/v0-cachina-presentation-slides)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/tlbXbip40ft)
+
+## Overview
+
+This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+
+## Deployment
+
+Your project is live at:
+
+**[https://vercel.com/artubss-projects/v0-cachina-presentation-slides](https://vercel.com/artubss-projects/v0-cachina-presentation-slides)**
+
+## Build your app
+
+Continue building your app on:
+
+**[https://v0.app/chat/projects/tlbXbip40ft](https://v0.app/chat/projects/tlbXbip40ft)**
+
+## How It Works
+
+1. Create and modify your project using [v0.app](https://v0.app)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository
