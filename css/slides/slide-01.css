@@ -191,6 +191,8 @@
   padding-top: 15px;
 }
 
+/*vai para todos os slides individuais para celular*/
+
 /* ================= 6. RESPONSIVIDADE (MOBILE) ================= */
 @media (max-width: 768px) {
   .slide-01-container {
@@ -256,6 +258,7 @@
     right: 0;
   }
 }
+
 /* ================= 1. BASE (Ajustada para iOS) ================= */
 .slide-01-container {
   display: grid;
