@@ -1,22 +1,51 @@
-/* ================= BASE ================= */
+/* ================= 1. BASE & LAYOUT (DESKTOP) ================= */
 .slide-01-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   align-items: center;
   padding: 60px;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   position: relative;
   background-color: #0a1128;
   color: #ffffff;
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  overflow: hidden;
 }
 
-/* ================= LEFT ================= */
+/* Efeito de Malha (Grid) no fundo */
+.slide-01-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Brilho Radial Centralizado */
+.slide-01-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(99, 102, 241, 0.12) 40%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* ================= 2. COLUNA ESQUERDA ================= */
+.slide-01-left {
+  z-index: 2;
+}
+
 .slide-01-left .title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -27,6 +56,7 @@
 
 .slide-01-left .title span {
   color: #0ea5e9;
+  text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
 }
 
 .slide-01-left .subtitle {
@@ -44,23 +74,16 @@
 .slide-01-left .year {
   font-size: 4rem;
   font-weight: 800;
-  color: #e2e8f0;
 }
 
-.slide-01-left .label {
-  font-size: 1.1rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.3;
-}
-
-/* ================= CENTER ================= */
+/* ================= 3. COLUNA CENTRAL (FOTO) ================= */
 .slide-01-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .avatar-gradient-border {
@@ -69,11 +92,12 @@
   border-radius: 50%;
   padding: 6px;
   background: linear-gradient(135deg, #0ea5e9, #6366f1, #0a1128);
-  box-shadow: 0 0 35px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 35px rgba(99, 102, 241, 0.3), 0 0 80px rgba(14, 165, 233, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  animation: float 6s ease-in-out infinite;
 }
 
 .avatar-gradient-border img {
@@ -83,48 +107,40 @@
   border-radius: 50%;
 }
 
-.slide-01-center .person-info {
-  margin-top: 60px;
-  text-align: center;
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-.slide-01-center h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.slide-01-center .person-info span {
-  font-size: 1.15rem;
-  color: #94a3b8;
-}
-
-/* ================= RIGHT ================= */
+/* ================= 4. COLUNA DIREITA (LOGO + FRASE) ================= */
 .slide-01-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  height: 100%;
+  gap: 30px;
+  z-index: 2;
 }
 
-/* ================= QUOTE BOX (COM IMAGEM HTML) ================= */
+.company-logo {
+  width: 320px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3));
+  animation: fadeUp 1s ease;
+}
+
 .slide-01-right .quote-box {
   position: relative;
   padding: 30px;
   border-radius: 15px;
   overflow: hidden;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    0 0 40px rgba(14, 165, 233, 0.15),
-    inset 0 0 60px rgba(0, 0, 0, 0.4);
-
+  border-left: 3px solid #0ea5e9;
+  background-color: rgba(10, 17, 40, 0.6);
   width: 100%;
   max-width: 420px;
 }
 
-/* IMAGEM VIA HTML */
+/* Imagem de Fundo da Frase */
 .quote-bg {
   position: absolute;
   inset: 0;
@@ -132,54 +148,20 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  opacity: 0.4; /* Ajuste para não brigar com o texto */
 }
 
-/* GRADIENTE UNIFICADO */
-.slide-01-right .quote-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-
-  background: linear-gradient(
-    135deg,
-    rgba(10, 17, 40, 0.95) 0%,
-    rgba(15, 23, 42, 0.9) 30%,
-    rgba(30, 58, 138, 0.75) 60%,
-    rgba(36, 69, 111, 0.6) 100%
-  );
-}
-
-/* TEXTO */
 .slide-01-right .quote-box p {
   position: relative;
   z-index: 2;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #cbd5e1;
+  color: #e2e8f0;
   font-style: italic;
+  margin: 0;
 }
 
-/* ================= SIGNATURE ================= */
-.slide-01-right .signature-box {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.slide-01-right .sig-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.slide-01-right .sig-label {
-  font-size: 1rem;
-  color: #94a3b8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ================= FOOTER ================= */
+/* ================= 5. RODAPÉ & ASSINATURA ================= */
 .slide-01-footer {
   position: absolute;
   bottom: 25px;
@@ -189,152 +171,55 @@
   justify-content: space-between;
   color: #475569;
   font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 15px;
 }
 
-.slide-01-container::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-20%, -50%);
-
-  width: 700px;
-  height: 700px;
-
-  background: radial-gradient(
-    circle,
-    rgba(14, 165, 233, 0.15) 0%,
-    rgba(99, 102, 241, 0.12) 40%,
-    transparent 70%
-  );
-
-  filter: blur(80px);
-  z-index: 0;
-}
-
-.avatar-gradient-border {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.slide-01-right .quote-box {
-  border-left: 3px solid #0ea5e9;
-}
-
-.slide-01-right .quote-box p {
-  color: #e2e8f0;
-}
-
-.slide-01-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-
-  background-size: 60px 60px;
-  pointer-events: none;
-}
-.slide-01-left .title span {
-  color: #0ea5e9;
-  text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
-}
-
-.slide-01-center::after {
-  content: "";
-  position: absolute;
-  right: -80px;
-  top: 50%;
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(to right, #0ea5e9, transparent);
-}
-
-.avatar-gradient-border {
-  box-shadow:
-    0 0 35px rgba(99, 102, 241, 0.3),
-    0 0 80px rgba(14, 165, 233, 0.2);
-}
-
-/* LOGO ACIMA DA FRASE */
-.company-logo {
-  width: 400px;
-  margin-bottom: 10px;
-
-  /* alinhamento com a box */
-  margin-left: 10px;
-
-  opacity: 0.9;
-}
-
-/* efeito leve (opcional, mas bonito) */
-.company-logo {
-  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3));
-}
-.company-logo {
-  animation: fadeUp 1s ease;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* --- LAYOUT DESKTOP (Padrão) --- */
-.slide-01-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas */
-  align-items: center;
-  gap: 30px;
-  padding: 60px;
-  height: 100vh;
-}
-
-/* --- AJUSTE PARA CELULAR (Media Query) --- */
+/* ================= 6. RESPONSIVIDADE (MOBILE) ================= */
 @media (max-width: 768px) {
   .slide-01-container {
-    display: flex; /* Muda de Grid para Flex */
-    flex-direction: column; /* Empilha os elementos */
-    height: auto; /* Deixa o slide crescer se o texto for longo */
-    padding: 40px 20px; /* Reduz o espaço lateral */
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 20px;
     gap: 40px;
+    overflow-y: auto;
     justify-content: flex-start;
+    align-items: center;
   }
 
-  .slide-01-left .title {
-    font-size: 2.5rem; /* Diminui o título no celular */
-    text-align: center;
-  }
+  /* Desativa brilhos pesados no mobile para fluidez */
+  .slide-01-container::before, .slide-01-container::after { display: none; }
 
-  .avatar-gradient-border {
-    width: 200px; /* Diminui a foto no celular para sobrar espaço */
-    height: 200px;
-  }
+  .slide-01-left { text-align: center; }
+  .slide-01-left .title { font-size: 2.2rem; }
+  .slide-01-left .experience-box { justify-content: center; }
 
-  .slide-01-quote {
+  .slide-01-center { order: -1; } /* Foto no topo no celular */
+  .avatar-gradient-border { width: 200px; height: 200px; }
+
+  .slide-01-right { 
+    align-items: center; 
+    width: 100%; 
+  }
+  
+  .company-logo { width: 250px; margin-bottom: 0; }
+
+  .slide-01-right .quote-box {
+    width: 100%;
+    max-width: 100%;
     padding: 20px;
-    background-attachment: scroll; /* Melhora performance no mobile */
+  }
+
+  .slide-01-footer {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
