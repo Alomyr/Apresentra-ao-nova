@@ -2,7 +2,7 @@
 const slides = [
   { id: 1, title: "Capa", component: "coverSlide" },
   { id: 8, title: "Nossos Valores", component: "valuesSlide" },
-  { id: 19, title: "Sobre Nós", component: "aboutUsSlide" },
+  { id: 19, title: "Sobre Nós", component: "valuePropositionSlide" },
   { id: 6, title: "Fluxo de Negócios", component: "businessFlowSlide" },
   { id: 7, title: "Como Vamos Ajudar", component: "howWeHelpSlide" },
   { id: 2, title: "Proposta de Valor", component: "valuePropositionSlide" },
@@ -947,101 +947,45 @@ function valuesSlide() {
 // Value Proposition Slide
 function valuePropositionSlide() {
   return ` 
-        <div class="h-full w-full bg-gradient-cachina-mix flex items-center relative">
-            <!-- Dark Background Pattern -->
-            <div class="absolute inset-0 opacity-20">
-                <div class="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-3xl opacity-30"></div>
-                <div class="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-3xl opacity-20"></div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-3xl opacity-10"></div>
-            </div>
+        <div class="slide-03-container">
+    <div class="slide-03-content">
+        <img src="./icons/cachina-logoo.png" class="company-logo-small" />
+        
+        <div class="text-group">
+            <p class="intro-text">
+                Na <span>Cachina Tecnologia</span>, acreditamos que a tecnologia só faz sentido quando gera <strong>resultados reais</strong>.
+            </p>
+            <p class="description-text">
+                Somos uma <strong>holding de inovação</strong> que conecta <span>estratégia, operação</span> e <span>produtos digitais</span> para empresas que buscam crescer com <strong>eficiência, segurança e escalabilidade</strong>.
+            </p>
+        </div>
+    </div>
 
-            <!-- Logo -->
-            <div class="absolute top-6 left-6">
-                <img src="./icons/cachina-logoo.png" alt="Cachina Logo" class="w-30 h-10 opacity-80">
-            </div>
-                               <div class="absolute inset-0 flex items-center justify-center">
-            <div class="relative animate-fade-in animate-delay-800">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-md opacity-45"></div>
-                <img src="./icons/cachina-icon.png" class="relative z-10 opacity-75 w-9 h-9">
-            </div>
+    <div class="slide-03-pilares">
+        <h2 class="pilares-title">Pilares que nos guiam:</h2>
+        
+        <div class="pilar-card">
+            <div class="pilar-icon">⚡</div>
+            <h2><span>Inovação contínua</span></h2>
         </div>
 
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left Content -->
-                    <div class="space-y-8">
-                        <h1 class="text-5xl md:text-6xl font-bold animate-slide-left">
-                            Gestão e TI que
-                            <span class="text-sky-400">aumentam vendas</span> e
-                            <span class="text-emerald-400">reduzem custos</span>
-                        </h1>
-
-                        <p class="text-xl text-gray-300 animate-slide-left animate-delay-200">
-                            Há mais de 20 anos, transformamos processos complexos em soluções
-                            simples para empresas que querem crescer na era digital.
-                        </p>
-                    </div>
-
-                    <!-- Right Content - 3 Pillars -->
-                    <div class="space-y-6">
-                        <!-- 1. Gestão Estratégica -->
-                        <div class="flex items-start gap-4 animate-slide-right animate-delay-300">
-                            <div class="bg-sky-500 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2 text-white">
-                                    GESTÃO ESTRATÉGICA
-                                </h3>
-                                <p class="text-gray-300">
-                                    Consultoria que gera ROI mensurável
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- 2. Infraestrutura Robusta -->
-                        <div class="flex items-start gap-4 animate-slide-right animate-delay-400">
-                            <div class="bg-sky-500 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2 text-white">
-                                    INFRAESTRUTURA ROBUSTA
-                                </h3>
-                                <p class="text-gray-300">
-                                    CloudBox e VDI de alta performance
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- 3. Automação Inteligente -->
-                        <div class="flex items-start gap-4 animate-slide-right animate-delay-500">
-                            <div class="bg-sky-500 p-3 rounded-lg">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <circle cx="12" cy="16" r="1"></circle>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2 text-white">
-                                    AUTOMAÇÃO INTELIGENTE
-                                </h3>
-                                <p class="text-gray-300">
-                                    Agentes de IA que trabalham 24/7
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="pilar-card">
+            <div class="pilar-icon">✔</div>
+            <h2><span>Excelência em execução</span></h2>
         </div>
 
+        <div class="pilar-card">
+            <div class="pilar-icon">📈</div>
+            <h2><span>Crescimento sustentável para nossos clientes</span></h2>
+        </div>
+    </div>
 
+    <div class="slide-01-footer">
+        <span>PAGE : 3</span>
+        <span>CACHINA PRESENTATION TEMPLATE</span>
+        <span>BUSINESS_20XX</span>
+    </div>
+</div>
     `;
 }
 

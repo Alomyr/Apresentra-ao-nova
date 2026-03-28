@@ -1,0 +1,143 @@
+/* Reaproveita a base do slide 01 para manter o fundo e efeitos */
+.slide-03-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Foco maior no texto da esquerda */
+  gap: 60px;
+  align-items: center;
+  padding: 80px;
+  height: 100dvh;
+  width: 100vw;
+  position: relative;
+  background-color: #0a1128;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Mantém os mesmos efeitos de fundo do slide 01 */
+.slide-03-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+}
+
+/* ================= CONTEÚDO ESQUERDA ================= */
+.slide-03-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.company-logo-small {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #e2e8f0;
+}
+
+.intro-text span, .description-text span {
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  max-width: 600px;
+}
+
+/* ================= PILARES DIREITA ================= */
+.slide-03-pilares {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pilares-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.pilar-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pilar-card:hover {
+  transform: translateX(10px);
+  border-color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.1);
+}
+
+.pilar-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(14, 165, 233, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* ================= RESPONSIVIDADE (MOBILE/IPHONE) ================= */
+@media (max-width: 768px) {
+  .slide-03-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    padding: 60px 20px;
+    gap: 40px;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  .intro-text {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .description-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .company-logo-small {
+    align-self: center;
+    width: 180px;
+  }
+
+  .pilares-title {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .pilar-card {
+    padding: 15px;
+  }
+}
