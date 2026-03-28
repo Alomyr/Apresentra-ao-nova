@@ -909,6 +909,7 @@ function valuesSlide() {
     </div>
 
     <div class="values-content">
+    <h3>Nascemos para simplificar a TI, oferecendo soluções inovadoras e suporte especializado. </h3>
         <h2 class="section-title">NOSSOS <span>VALORES</span></h2>
         
         <div class="cards-wrapper">
