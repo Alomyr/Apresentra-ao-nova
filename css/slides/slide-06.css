@@ -17,27 +17,47 @@
 
 /* Fundo padrão Cachina */
 .slide-06-container::after {
-  content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px; z-index: 1; pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .slide-06-container::before {
-  content: ""; position: absolute; top: 50%; left: 50%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-30%, -50%);
-  width: 900px; height: 900px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
-  filter: blur(80px); z-index: 0;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.12) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 0;
 }
 
 .slide-mgmt-content {
-  z-index: 2; width: 100%; max-width: 1200px;
-  display: flex; flex-direction: column; gap: 40px;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 /* Header Logo */
-.mgmt-header { margin-bottom: 20px; }
+.mgmt-header {
+  margin-bottom: 20px;
+}
 
 /* Layout Grid */
 .mgmt-grid {
@@ -113,9 +133,126 @@
   color: #94a3b8;
 }
 
-/* Responsividade Mobile */
-@media (max-width: 900px) {
-  .mgmt-grid { grid-template-columns: 1fr; gap: 40px; }
-  .mgmt-title { font-size: 2.8rem; }
-  .slide-06-container { padding: 40px 20px; justify-content: flex-start; }
+/* ================= 6. RESPONSIVIDADE (MOBILE) ================= */
+@media (max-width: 768px) {
+  .slide-01-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 20px;
+    gap: 40px;
+    overflow-y: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* Desativa brilhos pesados no mobile para fluidez */
+  .slide-01-container::before,
+  .slide-01-container::after {
+    display: none;
+  }
+
+  .slide-01-left {
+    text-align: center;
+  }
+  .slide-01-left .title {
+    font-size: 2.2rem;
+  }
+  .slide-01-left .experience-box {
+    justify-content: center;
+  }
+
+  .slide-01-center {
+    order: -1;
+  } /* Foto no topo no celular */
+  .avatar-gradient-border {
+    width: 200px;
+    height: 200px;
+  }
+
+  .slide-01-right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .company-logo {
+    width: 250px;
+    margin-bottom: 0;
+  }
+
+  .slide-01-right .quote-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .slide-01-footer {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* ================= 1. BASE (Ajustada para iOS) ================= */
+.slide-01-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 60px;
+  height: 100vh;
+  height: 100dvh; /* Altura dinâmica para Safari Mobile */
+  width: 100vw;
+  position: relative;
+  background-color: #0a1128;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased; /* Suaviza fontes no iPhone */
+}
+
+/* ================= 6. RESPONSIVIDADE (Blindada para Safari) ================= */
+@media (max-width: 768px) {
+  .slide-01-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    padding: 50px 20px;
+    gap: 35px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Scroll suave no iPhone */
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .avatar-gradient-border {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0; /* Impede que o Safari "esmague" a foto */
+  }
+
+  .slide-01-right .quote-box {
+    width: 95%; /* Evita colagem nas bordas laterais */
+    max-width: 100%;
+  }
+
+  .slide-01-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+  }
 }
