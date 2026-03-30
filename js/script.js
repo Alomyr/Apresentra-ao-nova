@@ -838,7 +838,7 @@ function createOptimizedImage(src, alt, className = "", lazy = true) {
 
   return img;
 }
-
+//slide 01
 function coverSlide() {
   return `
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -895,11 +895,7 @@ function coverSlide() {
  `;
 }
 
-// Values Slide
-// ==========================================
-// VALUES SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
-
+//slide 02
 function valuesSlide() {
   return `
 <div class="slide-02-container values-page">
@@ -949,7 +945,7 @@ function valuesSlide() {
     `;
 }
 
-// Value Proposition Slide
+// slide 03
 function valuePropositionSlide() {
   return ` 
         <div class="slide-03-container">
@@ -993,199 +989,7 @@ function valuePropositionSlide() {
 </div>
     `;
 }
-
-// AI Agent Slide
-// ==========================================
-// AI AGENT SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
-
-function aiAgentSlide() {
-  return `
-         
-      `;
-}
-
-// Contact Slide
-// ==========================================
-// CONTACT SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
-
-function contactSlide() {
-  return `
-  
-<div class="slide-contact-container">
-  <div class="slide-contact-content">
-    <div class="contact-header">
-      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
-      <h1 class="contact-title">Vamos <span>Conectar</span>?</h1>
-      <p class="contact-subtitle">
-        Estamos prontos para transformar sua visão em realidade tecnológica.
-      </p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-left-column">
-        <div class="contact-avatar-block">
-          <div class="contact-avatar-image">
-            <img src="icons/igor.png" alt="Igor - CEO & Founder" />
-          </div>
-          <div class="contact-avatar-text">
-            <h3>Igor</h3>
-            <p>CEO & Founder, Cachina</p>
-          </div>
-        </div>
-
-        <div class="contact-info">
-          <div class="info-item">
-            <div class="info-icon">📧</div>
-            <div class="info-text">
-              <label>E-mail</label>
-              <span>comercial@cachina.com.br</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">📍</div>
-            <div class="info-text">
-              <label>Localização</label>
-              <span>R. Jequitinhonha, 2929 - Neópolis, Natal - RN, 59088-210</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon">🌐</div>
-            <div class="info-text">
-              <label>Website</label>
-              <span>www.cachina.com.br</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
-            <div class="info-text">
-              <label>Instagram</label>
-              <span>@canhinasolucoes</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
-            <div class="info-text">
-              <label>LinkedIn</label>
-              <span>/empresa/grupo-cachina</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="qr-section">
-        <div class="qr-wrapper">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.cachina.com.br" alt="QR Code Contato" />
-        </div>
-        <p class="qr-label">Escaneie para salvar o contato</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-01-footer">
-    <span>PAGE : 16</span> <span>CACHINA PRESENTATION TEMPLATE</span>
-    <span>BUSINESS_2026</span>
-  </div>
-</div>
-
-    `;
-}
-
-// Clients Slide
-function clientsSlide() {
-  return `
-<div class="slide-13-container">
-  <div class="slide-13-left">
-    <h1 class="title">Alguns de nossos <span>Clientes</span></h1>
-    <p class="subtitle">
-      Empresas que confiam na nossa expertise para evoluir digitalmente.
-    </p>
-
-    <div class="experience-box">
-      <div class="year">100+</div>
-      <p class="desc-text">
-        Projetos entregues com sucesso em diversos setores.
-      </p>
-    </div>
-  </div>
-
-  <div class="slide-13-center">
-    <div class="clients-grid">
-      <div class="client-card">
-        <img src="icons/logos/Dropped Image (12).png" alt="Cliente 1" />
-      </div>
-      <div class="client-card">
-        <img src="icons/logos/Dropped Image (2).png" alt="Cliente 2" />
-      </div>
-      <div class="client-card">
-        <img src="icons/logos/Dropped Image (3).png" alt="Cliente 3" />
-      </div>
-      <div class="client-card">
-        <img src="./icons/logos/Dropped Image.png" alt="Cliente 4" />
-      </div>
-      <div class="client-card">
-        <img
-          src="./icons/logos/WhatsApp_Image_2026-03-24_at_7.55.22_AM-removebg-preview.png"
-          alt="Cliente 5"
-        />
-      </div>
-      <div class="client-card">
-        <img src="./icons/logos/Dropped Image (5).png" alt="Cliente 6" />
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-13-right">
-    <img
-      src="./icons/cachina-logoo.png"
-      class="company-logo"
-      alt="Cachina Logo"
-    />
-
-    <div class="quote-box">
-      <p>
-        "Parcerias sólidas são construídas com transparência, tecnologia de
-        ponta e foco total no resultado do cliente."
-      </p>
-    </div>
-  </div>
-
-  <div class="slide-01-footer">
-    <span>PAGE : 13</span>
-    <span>CACHINA PRESENTATION TEMPLATE</span>
-    <span>CUSTOMERS_2026</span>
-  </div>
-</div>
-
-    `;
-}
-
-// About Us Slide - Cachina Tecnologia
-// ==========================================
-// ABOUT US SLIDE - MOBILE OPTIMIZED
-// ==========================================
-
-function aboutUsSlide() {
-  return `
-
-    `;
-}
-
-// Business Flow Slide
-// Business Flow Slide
-// ==========================================
-// BUSINESS FLOW SLIDE - MOBILE OPTIMIZED
-// ==========================================
-
-// ==========================================
-// BUSINESS FLOW SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
-
+// slide 04
 function businessFlowSlide() {
   return `
 <div class="slide-04-container">
@@ -1267,9 +1071,8 @@ function businessFlowSlide() {
     `;
 }
 
-// How We Help Slide - Cachina Tecnologia
+// slide 05
 function howWeHelpSlide() {
-  //TODO:
   return `
   <div class="slide-05-container">
     <div class="slide-help-content">
@@ -1338,11 +1141,62 @@ function howWeHelpSlide() {
 
 `;
 }
+//slide 06
+function itManagementSlide() {
+  return `
+<div class="slide-06-container">
+  <div class="slide-mgmt-content">
+    <div class="mgmt-header">
+      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
+    </div>
 
-// ==========================================
-// CONSULTORIA TECNOLOGIA SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
+    <div class="mgmt-grid">
+      <div class="mgmt-text-box">
+        <h1 class="mgmt-title">
+          Gestão e TI que <br>
+          <span>aumentam vendas</span> e <br>
+          <span class="highlight-green">reduzem custos</span>
+        </h1>
+        <p class="mgmt-description">
+          Há mais de 20 anos, transformamos processos complexos em soluções simples para empresas que querem crescer na era digital.
+        </p>
+      </div>
 
+      <div class="mgmt-features">
+        <div class="feature-item">
+          <div class="feature-indicator"></div>
+          <div class="feature-content">
+            <h3>GESTÃO ESTRATÉGICA</h3>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-indicator"></div>
+          <div class="feature-content">
+            <h3>INFRAESTRUTURA ROBUSTA</h3>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-indicator"></div>
+          <div class="feature-content">
+            <h3>AUTOMAÇÃO INTELIGENTE</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-01-footer">
+    <span>PAGE : 6</span>
+    <span>CACHINA PRESENTATION TEMPLATE</span>
+    <span>BUSINESS_2026</span>
+  </div>
+</div>
+    `;
+}
+
+// slide 07
 function consultoriaTecnologiaSlide() {
   return `<div class="slide-07-container">
   <div class="slide-07-left">
@@ -1436,90 +1290,105 @@ function consultoriaTecnologiaSlide() {
     `;
 }
 
-// Emissor Fácil Slide
-// Emissor Fácil Slide
 function emissorFacilSlide() {
   return `
     
 `;
 }
 
-// CloudBox Slide
-// CloudBox Slide
 function cloudBoxSlide() {
   return `
     
     `;
 }
 
-// IT Management Slide
-// ==========================================
-// IT MANAGEMENT SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
-
-function itManagementSlide() {
-  return `
-<div class="slide-06-container">
-  <div class="slide-mgmt-content">
-    <div class="mgmt-header">
-      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
-    </div>
-
-    <div class="mgmt-grid">
-      <div class="mgmt-text-box">
-        <h1 class="mgmt-title">
-          Gestão e TI que <br>
-          <span>aumentam vendas</span> e <br>
-          <span class="highlight-green">reduzem custos</span>
-        </h1>
-        <p class="mgmt-description">
-          Há mais de 20 anos, transformamos processos complexos em soluções simples para empresas que querem crescer na era digital.
-        </p>
-      </div>
-
-      <div class="mgmt-features">
-        <div class="feature-item">
-          <div class="feature-indicator"></div>
-          <div class="feature-content">
-            <h3>GESTÃO ESTRATÉGICA</h3>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-indicator"></div>
-          <div class="feature-content">
-            <h3>INFRAESTRUTURA ROBUSTA</h3>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <div class="feature-indicator"></div>
-          <div class="feature-content">
-            <h3>AUTOMAÇÃO INTELIGENTE</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-01-footer">
-    <span>PAGE : 6</span>
-    <span>CACHINA PRESENTATION TEMPLATE</span>
-    <span>BUSINESS_2026</span>
-  </div>
-</div>
-    `;
-}
-
-// Custom Software Slide
-// Custom Software Slide - DevFácil
 function customSoftwareSlide() {
   return `
      
 `;
 }
+function aboutUsSlide() {
+  return `
 
-// Differentials Slide
+    `;
+}
+
+function aiAgentSlide() {
+  return `
+         
+      `;
+}
+
+// slide 13
+function clientsSlide() {
+  return `
+<div class="slide-13-container">
+  <div class="slide-13-left">
+    <h1 class="title">Alguns de nossos <span>Clientes</span></h1>
+    <p class="subtitle">
+      Empresas que confiam na nossa expertise para evoluir digitalmente.
+    </p>
+
+    <div class="experience-box">
+      <div class="year">100+</div>
+      <p class="desc-text">
+        Projetos entregues com sucesso em diversos setores.
+      </p>
+    </div>
+  </div>
+
+  <div class="slide-13-center">
+    <div class="clients-grid">
+      <div class="client-card">
+        <img src="icons/logos/Dropped Image (12).png" alt="Cliente 1" />
+      </div>
+      <div class="client-card">
+        <img src="icons/logos/Dropped Image (2).png" alt="Cliente 2" />
+      </div>
+      <div class="client-card">
+        <img src="icons/logos/Dropped Image (3).png" alt="Cliente 3" />
+      </div>
+      <div class="client-card">
+        <img src="./icons/logos/Dropped Image.png" alt="Cliente 4" />
+      </div>
+      <div class="client-card">
+        <img
+          src="./icons/logos/WhatsApp_Image_2026-03-24_at_7.55.22_AM-removebg-preview.png"
+          alt="Cliente 5"
+        />
+      </div>
+      <div class="client-card">
+        <img src="./icons/logos/Dropped Image (5).png" alt="Cliente 6" />
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-13-right">
+    <img
+      src="./icons/cachina-logoo.png"
+      class="company-logo"
+      alt="Cachina Logo"
+    />
+
+    <div class="quote-box">
+      <p>
+        "Parcerias sólidas são construídas com transparência, tecnologia de
+        ponta e foco total no resultado do cliente."
+      </p>
+    </div>
+  </div>
+
+  <div class="slide-01-footer">
+    <span>PAGE : 13</span>
+    <span>CACHINA PRESENTATION TEMPLATE</span>
+    <span>CUSTOMERS_2026</span>
+  </div>
+</div>
+
+    `;
+}
+
+//slide 14
 function differentialsSlide() {
   return `
   <div class="slide-14-container">
@@ -1589,11 +1458,7 @@ function differentialsSlide() {
          `;
 }
 
-// Process Slide
-// ==========================================
-// PROCESS SLIDE - MOBILE SCROLL OPTIMIZED
-// ==========================================
-
+// slide 15
 function processSlide() {
   return `
   <div class="slide-15-container">
@@ -1665,4 +1530,91 @@ function processSlide() {
   </div>
 </div>
            `;
+}
+
+//slide 16
+function contactSlide() {
+  return `
+  
+<div class="slide-contact-container">
+  <div class="slide-contact-content">
+    <div class="contact-header">
+      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
+      <h1 class="contact-title">Vamos <span>Conectar</span>?</h1>
+      <p class="contact-subtitle">
+        Estamos prontos para transformar sua visão em realidade tecnológica.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left-column">
+        <div class="contact-avatar-block">
+          <div class="contact-avatar-image">
+            <img src="icons/igor.png" alt="Igor - CEO & Founder" />
+          </div>
+          <div class="contact-avatar-text">
+            <h3>Igor</h3>
+            <p>CEO & Founder, Cachina</p>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-text">
+              <label>E-mail</label>
+              <span>comercial@cachina.com.br</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <label>Localização</label>
+              <span>R. Jequitinhonha, 2929 - Neópolis, Natal - RN, 59088-210</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🌐</div>
+            <div class="info-text">
+              <label>Website</label>
+              <span>www.cachina.com.br</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="info-text">
+              <label>Instagram</label>
+              <span>@canhinasolucoes</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="info-text">
+              <label>LinkedIn</label>
+              <span>/empresa/grupo-cachina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qr-section">
+        <div class="qr-wrapper">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.cachina.com.br" alt="QR Code Contato" />
+        </div>
+        <p class="qr-label">Escaneie para salvar o contato</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-01-footer">
+    <span>PAGE : 16</span> <span>CACHINA PRESENTATION TEMPLATE</span>
+    <span>BUSINESS_2026</span>
+  </div>
+</div>
+
+    `;
 }
