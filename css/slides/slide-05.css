@@ -1,0 +1,172 @@
+/* ================= SLIDE 05: PROBLEMAS E SOLUÇÕES ================= */
+.slide-05-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  min-height: 100dvh;
+  width: 100vw;
+  position: relative;
+  background-color: #0a1128;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Fundo padrão Cachina */
+.slide-05-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slide-05-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.slide-help-content {
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header */
+.help-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.help-title span {
+  color: #0ea5e9;
+  text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+}
+
+/* Grid de Comparação */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.comparison-column {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.column-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Estilo específico para Problemas */
+.problems .column-title {
+  color: #f87171;
+} /* Vermelho suave */
+.problems .icon {
+  background: rgba(248, 113, 113, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Estilo específico para Soluções */
+.solutions .column-title {
+  color: #0ea5e9;
+}
+.solutions .icon {
+  background: rgba(14, 165, 233, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.solutions {
+  border-color: rgba(14, 165, 233, 0.2);
+  background: rgba(14, 165, 233, 0.02);
+}
+
+.comparison-item {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #e2e8f0;
+}
+.comparison-item p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Seção de Promessa */
+.help-promise {
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.promise-tag {
+  color: #0ea5e9;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+.promise-text {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #e2e8f0;
+  margin: 15px 0;
+}
+.promise-badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Responsividade */
+@media (max-width: 850px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .help-title {
+    font-size: 2.5rem;
+  }
+  .slide-05-container {
+    padding: 40px 20px;
+  }
+}

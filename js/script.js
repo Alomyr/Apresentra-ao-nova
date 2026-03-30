@@ -5,7 +5,7 @@ const slides = [
   { id: 19, title: "Sobre Nós", component: "valuePropositionSlide" },
   { id: 6, title: "Fluxo de Negócios", component: "businessFlowSlide" },
   { id: 7, title: "Como Vamos Ajudar", component: "howWeHelpSlide" },
-  { id: 2, title: "Proposta de Valor", component: "valuePropositionSlide" },
+  { id: 2, title: "Proposta de Valor", component: "itManagementSlide" },
   {
     id: 18,
     title: "Consultoria de Tecnologia",
@@ -1431,7 +1431,7 @@ function businessFlowSlide() {
   </div>
 
   <div class="slide-01-footer">
-    <span>PAGE : 04</span>
+    <span>PAGE : 4</span>
     <span>CACHINA PRESENTATION TEMPLATE</span>
     <span>BUSINESS_2026</span>
   </div>
@@ -1442,222 +1442,72 @@ function businessFlowSlide() {
 // How We Help Slide - Cachina Tecnologia
 function howWeHelpSlide() {
   //TODO:
-  return `
-<div class="min-h-screen w-full bg-gradient-cachina-mix flex items-center justify-center relative overflow-hidden">    </div>
-            <!-- Dark Background Pattern -->
-            <div class="absolute inset-0 opacity-60">
-                <div class="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-3xl opacity-30"></div>
-                <div class="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-3xl opacity-20"></div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full blur-3xl opacity-10"></div>
-            </div>
+  return `<div class="slide-05-container">
+    <div class="slide-help-content">
+        <div class="help-header">
+            <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
+            <h1 class="help-title">Como Vamos <span>Ajudar Você</span></h1>
+        </div>
 
-            <!-- Grid Pattern Overlay -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="w-full h-full grid-pattern"></div>
-            </div>
-
-                <!-- Decorative Icons with Glow -->
- 
-  
-       
-
-            <!-- Floating Elements -->
-            <div class="absolute top-32 right-32 animate-float">
-                <div class="w-16 h-16 border border-blue-400 rounded-lg rotate-45 opacity-20"></div>
-            </div>
-            <div class="absolute bottom-32 right-20 animate-float animate-delay-300">
-                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full opacity-15"></div>
-            </div>
-
-            <!-- Main Content - CENTRALIZADO -->
-            <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-6xl mx-auto">
-                <!-- Logo with Glow Effect -->
-                <div class="animate-fade-in mb-8 relative flex justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-sky-400 blur-2xl opacity-20 rounded-full"></div>
-                    <img src="./icons/cachina-logoo.png" alt="Cachina Logo" class="relative z-10 w-75 h-30" loading="eager">
+        <div class="comparison-grid">
+            <div class="comparison-column problems">
+                <h2 class="column-title"><span class="icon">✕</span> Problemas que Identificamos</h2>
+                
+                <div class="comparison-item">
+                    <h3>Empresas gastando tempo e dinheiro</h3>
+                    <p>com processos manuais ineficientes</p>
                 </div>
 
-                <!-- Main Title with Enhanced Styling -->
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up animate-delay-200 text-white text-center leading-tight">
-                <div class="text-center mb-12 animate-slide-up">
-                      <h1 class="text-5xl font-bold text-white mb-2">
-                          <span class="inline-flex items-center gap-3">
-                              <span class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-2xl">⊙</span>
-                              Como Vamos <span class="text-sky-400">Ajudar Você</span>
-                          </span>
-                      </h1>
-                  </div>
-                </h1>
+                <div class="comparison-item">
+                    <h3>TI sobrecarregada e sem governança</h3>
+                    <p>falta de estrutura e planejamento estratégico</p>
+                </div>
 
-                <!-- Subtitle with Better Contrast -->
-                <p class="text-xl md:text-2xl font-light mb-12 animate-slide-up animate-delay-300 max-w-4xl text-gray-300 leading-relaxed text-center">
-                  <div class="grid lg:grid-cols-2 gap-8 mb-8 max-w-5xl mx -auto">
-                      <!-- Left Column - Problems -->
-                      <div class="space-y-4 animate-slide-left">
-                          <h2 class="text-2xl font-bold text-red-400 mb-6 flex items-center gap-2">
-                              <span class="text-3xl">✕</span> Problemas que Identificamos
-                          </h2>
-  
-                        <!-- Tabelas -->
-                        <!-- Problem 1 -->
+                <div class="comparison-item">
+                    <h3>Falta de segurança em informações críticas</h3>
+                    <p>vulnerabilidades que colocam o negócio em risco</p>
+                </div>
+            </div>
 
-                          <div class="bg-blue-900/40 border border-red-400/30 p-5 rounded-xl backdrop-blur-sm w-full">
-                            <div class="flex items-start gap-3">
-                                <span class="text-red-400 text-xl mt-1 flex-shrink-0">✕</span>
-                                
-                                <div class="text-left flex flex-col items-start">
-                                    <h3 class="text-red-300 font-semibold text-lg leading-tight">
-                                        Empresas gastando tempo e dinheiro
-                                    </h3>
-                                    <p class="text-gray-300 text-sm">
-                                        com processos manuais ineficientes
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                          <div class="bg-blue-900/40 border border-red-400/30 p-5 rounded-xl backdrop-blur-sm w-full">
-                            <div class="flex items-start gap-3">
-                                <span class="text-red-400 text-xl mt-1 flex-shrink-0">✕</span>
-                                
-                                <div class="text-left flex flex-col items-start">
-                                    <h3 class="text-red-300 font-semibold text-lg leading-tight">
-                                        TI sobrecarregada e sem governança
-                                    </h3>
-                                    <p class="text-gray-300 text-sm">
-                                        falta de estrutura e planejamento estratégico
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-
-                          <div class="bg-blue-900/40 border border-red-400/30 p-5 rounded-xl backdrop-blur-sm w-full">
-                            <div class="flex items-start gap-3">
-                                <span class="text-red-400 text-xl mt-1 flex-shrink-0">✕</span>
-                                
-                                <div class="text-left flex flex-col items-start">
-                                    <h3 class="text-red-300 font-semibold text-lg leading-tight">
-                                        Falta de segurança em informações críticas
-                                    </h3>
-                                    <p class="text-gray-300 text-sm">
-                                        vulnerabilidades que colocam o negócio em risco
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                          
-                      </div>
-  
-                      <!-- Right Column - Solutions -->
-                      <div class="space-y-4 animate-slide-right">
-                          <h2 class="text-2xl font-bold text-emerald-400 mb-6 flex items-center gap-2">
-                              <span class="text-3xl">✓</span> Nossas Soluções
-                          </h2>
-                        
-
-                          <div class="bg-blue-900/40 border border-red-400/30 p-5 rounded-xl backdrop-blur-sm w-full">
-                            <div class="flex items-start gap-3">
-                                  <span class="text-emerald-400 text-xl mt-1">✓</span>
-                                
-                                <div class="text-left flex flex-col items-start">
-                                    <h3 class="text-red-300 font-semibold text-lg leading-tight">
-                                        Desenhamos planos sob medida
-                                    </h3>
-                                    <p class="text-gray-300 text-sm">
-                                        estrategias personalizadas para seu negócio
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
-
-                          <div class="bg-blue-900/40 border border-red-400/30 p-5 rounded-xl backdrop-blur-sm w-full">
-                            <div class="flex items-start gap-3">
-                                  <span class="text-emerald-400 text-xl mt-1">✓</span>
-                                
-                                <div class="text-left flex flex-col items-start">
-                                    <h3 class="text-red-300 font-semibold text-lg leading-tight">
-                                        Redução de custos e aumento de produtividade
-                                    </h3>
-                                    <p class="text-gray-300 text-sm">
-                                        resultados mensuráveis e ROI comprovado
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-  
-  
+            <div class="comparison-column solutions">
+                <h2 class="column-title"><span class="icon">✓</span> Nossas Soluções</h2>
                 
+                <div class="comparison-item">
+                    <h3>Desenhamos planos sob medida</h3>
+                    <p>estratégias personalizadas para seu negócio</p>
+                </div>
 
-                          <div class="bg-blue-900/40 border border-red-400/30 p-5 rounded-xl backdrop-blur-sm w-full">
-                            <div class="flex items-start gap-3">
-                                  <span class="text-emerald-400 text-xl mt-1">✓</span>
-                                
-                                <div class="text-left flex flex-col items-start">
-                                    <h3 class="text-red-300 font-semibold text-lg leading-tight">
-                                        Tecnologia como motor de crecimento
-                                    </h3>
-                                    <p class="text-gray-300 text-sm">
-                                        inovação que impulsiona o futuro do seu negócio
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="comparison-item">
+                    <h3>Redução de custos e aumento de produtividade</h3>
+                    <p>resultados mensuráveis e ROI comprovado</p>
+                </div>
 
-
-
-                      </div>
-                  </div>
-                </p>
-
-                <!-- Enhanced Stats - CENTRALIZADO -->
-                <div class="animate-slide-up animate-delay-400 flex items-center justify-center gap-3 text-lg">
-                    <div class="mt-8 animate-slide-up animate-delay-400">
-                      <div class="bg-gradient-to-r from-blue-800/50 to-teal-800/50 border border-sky-400/30 p-6 rounded-2xl backdrop-blur-sm max-w-5xl mx-auto">
-                          <div class="text-center">
-                              <h3 class="text-yellow-400 font-bold text-xl mb-3 flex items-center justify-center gap-2">
-                                  <span class="text-2xl">💡</span> Nossa Promessa
-                              </h3>
-                              <p class="text-white text-lg italic mb-4">
-                                  "Enquanto você foca no futuro, nós garantimos que sua tecnologia esteja pronta para ele."
-                              </p>
-                              <div class="flex items-center justify-center gap-6 text-sm">
-                                  <div class="flex items-center gap-2">
-                                      <span class="text-sky-400">📈</span>
-                                      <span class="text-sky-400 font-medium">Crescimento</span>
-                                  </div>
-                                  <div class="flex items-center gap-2">
-                                      <span class="text-emerald-400">🛡️</span>
-                                      <span class="text-emerald-400 font-medium">Segurança</span>
-                                  </div>
-                                  <div class="flex items-center gap-2">
-                                      <span class="text-purple-400">✨</span>
-                                      <span class="text-purple-400 font-medium">Inovação</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+                <div class="comparison-item">
+                    <h3>Tecnologia como motor de crescimento</h3>
+                    <p>inovação que impulsiona o futuro do seu negócio</p>
+                </div>
             </div>
-
-            <!-- Enhanced Decorative Elements -->
-            <div class="absolute bottom-10 right-10 animate-scale-in animate-delay-500">
-                <div class="w-24 h-24 border-2 border-blue-400 rounded-lg rotate-12 opacity-30 shadow-2xl"></div>
-            </div>
-            <div class="absolute bottom-20 left-10 animate-scale-in animate-delay-600">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-sky-400 rounded-full opacity-10 blur-sm"></div>
-            </div>
-
-            <!-- Bottom Gradient Overlay -->
-            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
         </div>
-      `;
+
+        <div class="help-promise">
+            <p class="promise-tag">💡 Nossa Promessa</p>
+            <h3>"Enquanto você foca no futuro, nós garantimos que sua tecnologia esteja pronta para ele."</h3>
+            <div class="promise-badges">
+                <span>📈 Crescimento</span>
+                <span>🛡️ Segurança</span>
+                <span>✨ Inovação</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-01-footer">
+        <span>PAGE : 05</span>
+        <span>CACHINA PRESENTATION TEMPLATE</span>
+        <span>BUSINESS_2026</span>
+    </div>
+</div>
+
+`;
 }
 
 // ==========================================
@@ -2765,424 +2615,55 @@ function cloudBoxSlide() {
 
 function itManagementSlide() {
   return `
-        <style>
-            .cachina-it-slide {
-                height: 100%;
-                width: 100%;
-                background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8c 50%, #1a2942 100%);
-                display: flex;
-                align-items: center;
-                position: relative;
-                color: white;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            }
+<div class="slide-06-container">
+  <div class="slide-mgmt-content">
+    <div class="mgmt-header">
+      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
+    </div>
 
-            .cachina-it-logo {
-                position: absolute;
-                top: 24px;
-                left: 24px;
-                width: 120px;
-                height: 40px;
-                opacity: 0.8;
-            }
+    <div class="mgmt-grid">
+      <div class="mgmt-text-box">
+        <h1 class="mgmt-title">
+          Gestão e TI que <br>
+          <span>aumentam vendas</span> e <br>
+          <span class="highlight-green">reduzem custos</span>
+        </h1>
+        <p class="mgmt-description">
+          Há mais de 20 anos, transformamos processos complexos em soluções simples para empresas que querem crescer na era digital.
+        </p>
+      </div>
 
-            .cachina-it-container {
-                max-width: 1400px;
-                margin: 0 auto;
-                padding: 0 48px;
-                width: 100%;
-            }
-
-            .cachina-it-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 80px;
-                align-items: center;
-            }
-
-            .cachina-it-left {
-                display: flex;
-                flex-direction: column;
-                gap: 32px;
-            }
-
-            .cachina-it-title-wrapper {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-                animation: slideInLeft 0.6s ease-out;
-            }
-
-            .cachina-it-icon-gear {
-                width: 56px;
-                height: 56px;
-                color: #38bdf8;
-                flex-shrink: 0;
-            }
-
-            .cachina-it-main-title {
-                font-size: 48px;
-                font-weight: 700;
-                line-height: 1.2;
-                margin: 0;
-            }
-
-            .cachina-it-subtitle {
-                font-size: 28px;
-                font-weight: 400;
-                color: #38bdf8;
-                margin: 0;
-                animation: slideInLeft 0.6s ease-out 0.2s both;
-            }
-
-            .cachina-it-features {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .cachina-it-feature-item {
-                display: flex;
-                align-items: flex-start;
-                gap: 12px;
-                font-size: 18px;
-                line-height: 1.5;
-                color: #e5e7eb;
-            }
-
-            .cachina-it-feature-item:nth-child(1) {
-                animation: slideInLeft 0.6s ease-out 0.3s both;
-            }
-
-            .cachina-it-feature-item:nth-child(2) {
-                animation: slideInLeft 0.6s ease-out 0.4s both;
-            }
-
-            .cachina-it-feature-item:nth-child(3) {
-                animation: slideInLeft 0.6s ease-out 0.5s both;
-            }
-
-            .cachina-it-feature-item:nth-child(4) {
-                animation: slideInLeft 0.6s ease-out 0.6s both;
-            }
-
-            .cachina-it-feature-item:nth-child(5) {
-                animation: slideInLeft 0.6s ease-out 0.7s both;
-            }
-
-            .cachina-it-feature-icon {
-                width: 24px;
-                height: 24px;
-                color: #34d399;
-                flex-shrink: 0;
-                margin-top: 2px;
-            }
-
-            .cachina-it-feature-text strong {
-                color: white;
-                font-weight: 600;
-            }
-
-            .cachina-it-right {
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-                animation: slideInRight 0.6s ease-out 0.3s both;
-            }
-
-            .cachina-it-card-main {
-                background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
-                backdrop-filter: blur(10px);
-                padding: 32px;
-                border-radius: 16px;
-                border: 1px solid rgba(56, 189, 248, 0.3);
-            }
-
-            .cachina-it-card-header {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 24px;
-            }
-
-            .cachina-it-card-icon {
-                width: 32px;
-                height: 32px;
-                color: white;
-            }
-
-            .cachina-it-card-title {
-                font-size: 24px;
-                font-weight: 700;
-                margin: 0;
-                color: white;
-            }
-
-            .cachina-it-card-items {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .cachina-it-card-item {
-                background: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(5px);
-                padding: 16px;
-                border-radius: 12px;
-                border: 1px solid rgba(52, 211, 153, 0.3);
-                display: flex;
-                align-items: center;
-                gap: 12px;
-            }
-
-            .cachina-it-check-icon {
-                width: 24px;
-                height: 24px;
-                color: #34d399;
-                flex-shrink: 0;
-            }
-
-            .cachina-it-card-item-text {
-                font-size: 16px;
-                font-weight: 500;
-                color: white;
-                margin: 0;
-            }
-
-            .cachina-it-results-card {
-                background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%);
-                backdrop-filter: blur(10px);
-                padding: 24px;
-                border-radius: 16px;
-                border: 1px solid rgba(52, 211, 153, 0.2);
-            }
-
-            .cachina-it-results-title {
-                font-size: 20px;
-                font-weight: 700;
-                color: #34d399;
-                text-align: center;
-                margin: 0 0 24px 0;
-                letter-spacing: 1px;
-            }
-
-            .cachina-it-results-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 16px;
-            }
-
-            .cachina-it-result-box {
-                text-align: center;
-                padding: 20px 16px;
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 12px;
-            }
-
-            .cachina-it-result-number {
-                font-size: 40px;
-                font-weight: 700;
-                margin: 0 0 8px 0;
-            }
-
-            .cachina-it-result-number.green {
-                color: #34d399;
-            }
-
-            .cachina-it-result-number.blue {
-                color: #38bdf8;
-            }
-
-            .cachina-it-result-number.orange {
-                color: #fb923c;
-            }
-
-            .cachina-it-result-label {
-                font-size: 14px;
-                color: #d1d5db;
-                line-height: 1.4;
-                margin: 0;
-            }
-
-            .cachina-it-pagination {
-                position: absolute;
-                bottom: 24px;
-                right: 24px;
-                color: #9ca3af;
-                font-size: 14px;
-            }
-
-            @keyframes slideInLeft {
-                from {
-                    opacity: 0;
-                    transform: translateX(-30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            @keyframes slideInRight {
-                from {
-                    opacity: 0;
-                    transform: translateX(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            @media (max-width: 1024px) {
-                .cachina-it-grid {
-                    grid-template-columns: 1fr;
-                    gap: 40px;
-                }
-                
-                .cachina-it-slide {
-                    overflow-y: auto;
-                    -webkit-overflow-scrolling: touch;
-                    height: 100vh;
-                    max-height: 100vh;
-                    padding: 60px 24px 80px 24px;
-                }
-            }
-        </style>
-
-        <div class="cachina-it-slide it-management-slide">
-            <div class="cachina-it-logo">
-                <img src="./icons/cachina-logoo.png" alt="Cachina Logo" style="width: 100%; height: 100%; object-fit: contain;">
-            </div>
-
-            <div class="cachina-it-container">
-                <div class="cachina-it-grid">
-                    <!-- Left Content -->
-                    <div class="cachina-it-left">
-                        <div class="cachina-it-title-wrapper">
-                            <svg class="cachina-it-icon-gear" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <h1 class="cachina-it-main-title">
-                                Gestão de TI &<br>Terceirização
-                            </h1>
-                        </div>
-
-                        <h2 class="cachina-it-subtitle">
-                            Sua TI Funcionando Perfeitamente, Sempre
-                        </h2>
-
-                        <div class="cachina-it-features">
-                            <div class="cachina-it-feature-item">
-                                <svg class="cachina-it-feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                                <span class="cachina-it-feature-text">
-                                    <strong>Gestão de TI Terceirizada</strong> → Equipe especializada dedicada
-                                </span>
-                            </div>
-
-                            <div class="cachina-it-feature-item">
-                                <svg class="cachina-it-feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
-                                </svg>
-                                <span class="cachina-it-feature-text">
-                                    <strong>Suporte Técnico N1/N2</strong> → Resposta em até 15 minutos
-                                </span>
-                            </div>
-
-                            <div class="cachina-it-feature-item">
-                                <svg class="cachina-it-feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                                </svg>
-                                <span class="cachina-it-feature-text">
-                                    <strong>Terceirização de Mão de Obra</strong> → Profissionais qualificados
-                                </span>
-                            </div>
-
-                            <div class="cachina-it-feature-item">
-                                <svg class="cachina-it-feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-                                </svg>
-                                <span class="cachina-it-feature-text">
-                                    <strong>Monitoramento 24/7</strong> → Problemas resolvidos antes de acontecer
-                                </span>
-                            </div>
-
-                            <div class="cachina-it-feature-item">
-                                <svg class="cachina-it-feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                                </svg>
-                                <span class="cachina-it-feature-text">
-                                    <strong>Relatórios Gerenciais</strong> → KPIs e métricas de performance
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Content -->
-                    <div class="cachina-it-right">
-                        <div class="cachina-it-card-main">
-                            <div class="cachina-it-card-header">
-                                <svg class="cachina-it-card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                                <h3 class="cachina-it-card-title">Gestão de TI & Terceirização</h3>
-                            </div>
-
-                            <div class="cachina-it-card-items">
-                                <div class="cachina-it-card-item">
-                                    <svg class="cachina-it-check-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
-                                    </svg>
-                                    <p class="cachina-it-card-item-text">Gestão de TI Terceirizada</p>
-                                </div>
-
-                                <div class="cachina-it-card-item">
-                                    <svg class="cachina-it-check-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
-                                    </svg>
-                                    <p class="cachina-it-card-item-text">Suporte Técnico N1/N2</p>
-                                </div>
-
-                                <div class="cachina-it-card-item">
-                                    <svg class="cachina-it-check-icon" fill="currentColor" viewBox="0 0 24 24">
-                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
-                                    </svg>
-                                    <p class="cachina-it-card-item-text">Terceirização de Mão de Obra</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cachina-it-results-card">
-                            <h4 class="cachina-it-results-title">RESULTADOS GARANTIDOS</h4>
-                            
-                            <div class="cachina-it-results-grid">
-                                <div class="cachina-it-result-box">
-                                    <p class="cachina-it-result-number green">95%</p>
-                                    <p class="cachina-it-result-label">redução em<br>downtime</p>
-                                </div>
-
-                                <div class="cachina-it-result-box">
-                                    <p class="cachina-it-result-number blue">40%</p>
-                                    <p class="cachina-it-result-label">economia em<br>custos</p>
-                                </div>
-
-                                <div class="cachina-it-result-box">
-                                    <p class="cachina-it-result-number orange">99.5%</p>
-                                    <p class="cachina-it-result-label">SLA<br>disponibilidade</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cachina-it-pagination">11 / 16</div>
+      <div class="mgmt-features">
+        <div class="feature-item">
+          <div class="feature-indicator"></div>
+          <div class="feature-content">
+            <h3>GESTÃO ESTRATÉGICA</h3>
+          </div>
         </div>
+
+        <div class="feature-item">
+          <div class="feature-indicator"></div>
+          <div class="feature-content">
+            <h3>INFRAESTRUTURA ROBUSTA</h3>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-indicator"></div>
+          <div class="feature-content">
+            <h3>AUTOMAÇÃO INTELIGENTE</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-01-footer">
+    <span>PAGE : 6</span>
+    <span>CACHINA PRESENTATION TEMPLATE</span>
+    <span>BUSINESS_2026</span>
+  </div>
+</div>
     `;
 }
 
