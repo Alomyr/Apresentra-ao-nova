@@ -14,7 +14,7 @@ const slides = [
   { id: 9, title: "Agente de IA", component: "aiAgentSlide" },
   { id: 10, title: "Emissor Fácil", component: "emissorFacilSlide" },
   { id: 11, title: "CloudBox/VDI", component: "cloudBoxSlide" },
-  { id: 12, title: "Gestão de TI", component: "" }, //repetido mudar aqui
+  { id: 12, title: "Gestão de TI", component: "" }, //repetido mudar aqui teste de subida
   { id: 13, title: "Software Personalizado", component: "customSoftwareSlide" },
   { id: 14, title: "Clientes", component: "clientsSlide" },
   { id: 15, title: "Diferenciais", component: "differentialsSlide" },
