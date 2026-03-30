@@ -1,20 +1,22 @@
-/* ================= 1. BASE & LAYOUT ================= */
+/* ================= 1. BASE & LAYOUT (DESKTOP) ================= */
 .slide-14-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 30px;
   align-items: center;
   padding: 60px;
-  height: 100dvh;
+  height: 100vh;
+  height: 100dvh; /* Altura dinâmica para Safari Mobile */
   width: 100vw;
   position: relative;
   background-color: #0a1128;
   color: #ffffff;
   font-family: "Inter", sans-serif;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Efeito de Fundo Padrão Cachina */
+/* Efeito de Malha (Grid) no fundo */
 .slide-14-container::after {
   content: "";
   position: absolute;
@@ -27,7 +29,12 @@
   z-index: 1;
 }
 
-/* ================= 2. ESTILOS ESPECÍFICOS ================= */
+/* ================= 2. COLUNA ESQUERDA = : 14 ================= */
+.slide-14-left { z-index: 2; }
+.slide-14-left .title { font-size: 3rem; font-weight: 800; margin-bottom: 15px; }
+.slide-14-left .title span { color: #0ea5e9; text-shadow: 0 0 20px rgba(14, 165, 233, 0.4); }
+.slide-14-left .subtitle { color: #94a3b8; font-size: 1.1rem; }
+
 .award-icon {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -49,13 +56,9 @@
   gap: 8px;
 }
 
-/* Cards da Coluna Central */
-.feature-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 2;
-}
+/* ================= 3. COLUNA CENTRAL (CARDS) ================= */
+.slide-14-center { z-index: 2; }
+.feature-stack { display: flex; flex-direction: column; gap: 20px; }
 
 .feature-card {
   background: rgba(255, 255, 255, 0.03);
@@ -68,83 +71,104 @@
   transition: transform 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: scale(1.02);
-  background: rgba(14, 165, 233, 0.05);
-}
+.feature-card:hover { transform: scale(1.02); background: rgba(14, 165, 233, 0.05); }
 
 .card-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
+  width: 50px; height: 50px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.card-icon.blue { background: rgba(14, 165, 233, 0.2); color: #0ea5e9; }
+.card-icon.green { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+.card-icon.orange { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+
+.feature-card h3 { font-size: 1.1rem; margin-bottom: 5px; color: #fff; }
+.feature-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.4; }
+
+/* ================= 4. COLUNA DIREITA ================= */
+.slide-14-right {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-.card-icon.blue {
-  background: rgba(14, 165, 233, 0.2);
-  color: #0ea5e9;
-}
-.card-icon.green {
-  background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
-}
-.card-icon.orange {
-  background: rgba(249, 115, 22, 0.2);
-  color: #f97316;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  z-index: 2;
 }
 
-.feature-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  color: #fff;
-}
-.feature-card p {
+.company-logo { width: 280px; max-width: 100%; filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3)); }
+
+.check-list-box { border-left: 3px solid #22c55e !important; background: rgba(10, 17, 40, 0.6); padding: 25px; border-radius: 0 15px 15px 0; width: 100%; }
+.list-title { color: #22c55e; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 20px; font-weight: 700; }
+.check-list { list-style: none; padding: 0; margin: 0; }
+.check-list li { margin-bottom: 12px; font-size: 0.95rem; color: #e2e8f0; display: flex; gap: 10px; }
+
+/* ================= 5. RODAPÉ ================= */
+.slide-01-footer {
+  position: absolute;
+  bottom: 25px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
   font-size: 0.85rem;
-  color: #94a3b8;
-  line-height: 1.4;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 15px;
 }
 
-/* Lista de Check na Direita */
-.check-list-box {
-  border-left: 3px solid #22c55e !important;
-}
-.list-title {
-  color: #22c55e;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-.check-list {
-  list-style: none;
-  padding: 0;
-}
-.check-list li {
-  margin-bottom: 12px;
-  font-size: 0.95rem;
-  color: #e2e8f0;
-  display: flex;
-  gap: 10px;
-}
-
-/* ================= 3. RESPONSIVIDADE ================= */
+/* ================= 6. RESPONSIVIDADE (MOBILE & iPHONE) ================= */
 @media (max-width: 768px) {
   .slide-14-container {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    padding: 60px 20px !important;
-    overflow-y: auto !important;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    padding: 50px 20px;
+    gap: 35px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    align-items: center;
   }
-  .timeline-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+
+  /* Oculta grid no mobile para performance como no seu modelo */
+  .slide-14-container::after { display: none; }
+
+  .slide-14-left { text-align: center; width: 100%; }
+  .slide-14-left .title { font-size: 2.2rem; }
+  .highlights-mini { justify-content: center; }
+
+  .slide-14-center { width: 100%; order: 1; } /* Cards descem após o título */
+  
+  .feature-card {
+    padding: 15px;
+    gap: 15px;
   }
-  .timeline-line {
-    display: none;
-  } /* Remove a linha horizontal no mobile */
-  .step-card {
+
+  .slide-14-right {
+    width: 100%;
+    align-items: center;
+    order: 2;
+  }
+
+  .company-logo { width: 220px; }
+
+  .check-list-box {
+    width: 95%;
+    padding: 20px;
+    border-radius: 15px; /* Arredonda tudo no mobile para estética */
+  }
+
+  .slide-01-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
     width: 100%;
   }
 }
