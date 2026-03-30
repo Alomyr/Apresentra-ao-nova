@@ -1380,10 +1380,15 @@ function businessFlowSlide() {
 <div class="slide-04-container">
   <div class="slide-ecosystem-content">
     <div class="ecosystem-header">
-      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
+      <img
+        src="./icons/cachina-logoo.png"
+        class="company-logo-small"
+        alt="Cachina Logo"
+      />
       <h1 class="ecosystem-title">Nosso <span>Ecossistema</span></h1>
       <p class="ecosystem-subtitle">
-        Uma estrutura completa de soluções que se potencializam para gerar valor escalável.
+        Uma estrutura completa de soluções que se potencializam para gerar valor
+        escalável.
       </p>
     </div>
 
@@ -1391,17 +1396,24 @@ function businessFlowSlide() {
       <div class="eco-card">
         <div class="eco-icon">🚀</div>
         <div class="eco-body">
-          <h3>Cachina Digital</h3>
-          <p>Desenvolvimento de produtos, apps e plataformas de alta performance.</p>
+          <h3>Cachina Consultoria</h3>
+          <p>
+            Desenvolvimento de produtos, apps e plataformas de alta performance
+            personalizados.
+          </p>
         </div>
         <div class="eco-tag">PRODUTOS</div>
       </div>
 
-      <div class="eco-card featured">
+      
+      <div class="eco-card">
         <div class="eco-icon">⚙️</div>
         <div class="eco-body">
-          <h3>Cachina Ops</h3>
-          <p>Operação e infraestrutura escalável com foco em segurança e eficiência.</p>
+          <h3>Cachina Gestão TI</h3>
+          <p>
+            Operação e infraestrutura escalável com foco em segurança e
+            eficiência suporte e Tercerização.
+          </p>
         </div>
         <div class="eco-tag">OPERAÇÃO</div>
       </div>
@@ -1410,7 +1422,9 @@ function businessFlowSlide() {
         <div class="eco-icon">💡</div>
         <div class="eco-body">
           <h3>Cachina Ventures</h3>
-          <p>Estratégia e inovação para novos modelos de negócios e holdings.</p>
+          <p>
+            Estratégia e inovação para novos modelos de negócios e holdings.
+          </p>
         </div>
         <div class="eco-tag">ESTRATÉGIA</div>
       </div>
@@ -1419,19 +1433,22 @@ function businessFlowSlide() {
         <div class="eco-icon">🛡️</div>
         <div class="eco-body">
           <h3>Cachina Security</h3>
-          <p>Proteção de dados e conformidade para ambientes corporativos críticos.</p>
+          <p>
+            Proteção de dados e conformidade para ambientes corporativos
+            críticos.
+          </p>
         </div>
         <div class="eco-tag">SEGURANÇA</div>
       </div>
     </div>
 
     <div class="ecosystem-footer-text">
-      <h3>Conectando tecnologia, pessoas e processos para o próximo nível.</h3>
+      <p>Conectando tecnologia, pessoas e processos para o próximo nível.</p>
     </div>
   </div>
 
   <div class="slide-01-footer">
-    <span>PAGE : 4</span>
+    <span>PAGE : 04</span>
     <span>CACHINA PRESENTATION TEMPLATE</span>
     <span>BUSINESS_2026</span>
   </div>
@@ -1442,7 +1459,8 @@ function businessFlowSlide() {
 // How We Help Slide - Cachina Tecnologia
 function howWeHelpSlide() {
   //TODO:
-  return `<div class="slide-05-container">
+  return `
+  <div class="slide-05-container">
     <div class="slide-help-content">
         <div class="help-header">
             <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
@@ -1501,7 +1519,7 @@ function howWeHelpSlide() {
     </div>
 
     <div class="slide-01-footer">
-        <span>PAGE : 05</span>
+        <span>PAGE : 5</span>
         <span>CACHINA PRESENTATION TEMPLATE</span>
         <span>BUSINESS_2026</span>
     </div>
