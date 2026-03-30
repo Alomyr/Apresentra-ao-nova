@@ -1011,11 +1011,7 @@ function contactSlide() {
 <div class="slide-contact-container">
   <div class="slide-contact-content">
     <div class="contact-header">
-      <img
-        src="./icons/cachina-logoo.png"
-        class="company-logo-small"
-        alt="Cachina Logo"
-      />
+      <img src="./icons/cachina-logoo.png" class="company-logo-small" alt="Cachina Logo" />
       <h1 class="contact-title">Vamos <span>Conectar</span>?</h1>
       <p class="contact-subtitle">
         Estamos prontos para transformar sua visão em realidade tecnológica.
@@ -1039,7 +1035,7 @@ function contactSlide() {
             <div class="info-icon">📧</div>
             <div class="info-text">
               <label>E-mail</label>
-              <span>contato@cachina.com.br</span>
+              <span>comercial@cachina.com.br</span>
             </div>
           </div>
 
@@ -1047,7 +1043,7 @@ function contactSlide() {
             <div class="info-icon">📍</div>
             <div class="info-text">
               <label>Localização</label>
-              <span>Natal, RN - Brasil</span>
+              <span>R. Jequitinhonha, 2929 - Neópolis, Natal - RN, 59088-210</span>
             </div>
           </div>
 
@@ -1058,15 +1054,28 @@ function contactSlide() {
               <span>www.cachina.com.br</span>
             </div>
           </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="info-text">
+              <label>Instagram</label>
+              <span>@canhinasolucoes</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="info-text">
+              <label>LinkedIn</label>
+              <span>/empresa/grupo-cachina</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="qr-section">
         <div class="qr-wrapper">
-          <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.cachina.com.br"
-            alt="QR Code Contato"
-          />
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.cachina.com.br" alt="QR Code Contato" />
         </div>
         <p class="qr-label">Escaneie para salvar o contato</p>
       </div>
@@ -1074,8 +1083,7 @@ function contactSlide() {
   </div>
 
   <div class="slide-01-footer">
-    <span>PAGE : 05</span>
-    <span>CACHINA PRESENTATION TEMPLATE</span>
+    <span>PAGE : 16</span> <span>CACHINA PRESENTATION TEMPLATE</span>
     <span>BUSINESS_2026</span>
   </div>
 </div>
