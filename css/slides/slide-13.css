@@ -56,15 +56,27 @@
   width: 100%;
   padding: 20px 0;
   /* Máscara suave para as pontas */
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
 }
 
 .logo-track {
   display: flex;
   align-items: center;
   /* 5 logos originais * 200px largura */
-  width: calc(200px * 10); 
+  width: calc(200px * 10);
   animation: scrollInfinito 15s linear infinite;
 }
 
@@ -81,12 +93,12 @@
   max-width: 130px; /* Aumentei um pouco para destaque */
   max-height: 90px;
   object-fit: contain;
-  
+
   /* REMOÇÃO DE FILTROS: Aqui garantimos a cor */
-  filter: none !important; 
+  filter: none !important;
   -webkit-filter: grayscale(0%) !important;
   opacity: 1 !important;
-  
+
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -97,8 +109,12 @@
 
 /* Animação Infinita */
 @keyframes scrollInfinito {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-200px * 5)); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 5));
+  }
 }
 
 .logo-slider:hover .logo-track {
@@ -334,6 +350,92 @@
   z-index: 2;
   align-items: flex-end !important;
   text-align: right;
+}
+
+/* ================= 4. RESPONSIVIDADE (MOBILE AJUSTADA) ================= */
+@media (max-width: 768px) {
+  .slide-13-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100dvh !important;
+    padding: 40px 20px !important;
+    gap: 30px;
+    overflow-y: auto;
+    overflow-x: hidden; /* Evita que o carrossel quebre a largura da página */
+    justify-content: flex-start !important;
+    align-items: center;
+  }
+
+  /* Garante que o container do carrossel ocupe a largura total no mobile */
+  .slide-13-center {
+    width: 100vw !important;
+    margin-left: -20px; /* Compensa o padding do container pai para sangrar na tela */
+    margin-right: -20px;
+    order: 2; /* Garante que fique abaixo do título */
+  }
+
+  .logo-slider {
+    padding: 10px 0;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  .logo-item {
+    width: 140px; /* Logos menores no celular */
+    padding: 0 20px;
+  }
+
+  .logo-item img {
+    max-width: 100px;
+    max-height: 60px;
+  }
+
+  /* Re-calcula a animação para a largura menor dos itens no mobile */
+  @keyframes scrollInfinito {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-140px * 5));
+    } /* 140px é a nova largura do logo-item */
+  }
+
+  .slide-13-left,
+  .slide-13-right {
+    text-align: center;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .slide-13-left .title {
+    font-size: 2rem;
+  }
+
+  .slide-13-right {
+    order: 3;
+    margin-top: 20px;
+  }
+
+  .slide-01-footer {
+    position: relative;
+    margin-top: 40px;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
 }
 
 /* ================= 4. RESPONSIVIDADE (MOBILE/SAFARI) ================= */
