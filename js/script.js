@@ -1552,7 +1552,8 @@ function aiAgentSlide() {
 // slide 13
 function clientsSlide() {
   return `
-<div class="slide-13-container">
+<div class="slide-13-container active">
+  
   <div class="slide-13-left">
     <h1 class="title">Alguns de nossos <span>Clientes</span></h1>
     <p class="subtitle">
@@ -1567,54 +1568,47 @@ function clientsSlide() {
     </div>
   </div>
 
-  <div class="slide-13-center">
-    <div class="clients-grid">
-      <div class="client-card">
-        <img src="icons/logos/Dropped Image (12).png" alt="Cliente 1" />
-      </div>
-      <div class="client-card">
-        <img src="icons/logos/Dropped Image (2).png" alt="Cliente 2" />
-      </div>
-      <div class="client-card">
-        <img src="icons/logos/Dropped Image (3).png" alt="Cliente 3" />
-      </div>
-      <div class="client-card">
-        <img src="./icons/logos/Dropped Image.png" alt="Cliente 4" />
-      </div>
-      <div class="client-card">
-        <img
-          src="./icons/logos/WhatsApp_Image_2026-03-24_at_7.55.22_AM-removebg-preview.png"
-          alt="Cliente 5"
-        />
-      </div>
-      <div class="client-card">
-        <img src="./icons/logos/Dropped Image (5).png" alt="Cliente 6" />
-      </div>
+<div class="slide-13-center">
+  <div class="logo-slider">
+    <div class="logo-track">
+      <div class="logo-item"><img src="icons/logos/Dropped Image (2).png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image (3).png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image (12).png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image.png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image (5).png" alt=""></div>
+
+      <div class="logo-item"><img src="icons/logos/Dropped Image (2).png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image (3).png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image (12).png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image.png" alt=""></div>
+      <div class="logo-item"><img src="icons/logos/Dropped Image (5).png" alt=""></div>
     </div>
-  </div>
-
-  <div class="slide-13-right">
-    <img
-      src="./icons/cachina-logoo.png"
-      class="company-logo"
-      alt="Cachina Logo"
-    />
-
-    <div class="quote-box">
-      <p>
-        "Parcerias sólidas são construídas com transparência, tecnologia de
-        ponta e foco total no resultado do cliente."
-      </p>
-    </div>
-  </div>
-
-  <div class="slide-01-footer">
-    <span>PAGE : 13</span>
-    <span>CACHINA PRESENTATION TEMPLATE</span>
-    <span>CUSTOMERS_2026</span>
   </div>
 </div>
 
+  <div class="slide-13-right">
+    <div class="branding-wrapper">
+      <img src="./icons/cachina-logoo.png" class="company-logo" alt="Cachina Logo" />
+      
+      <div class="quote-box">
+        <p>
+          "Parcerias sólidas são construídas com transparência, tecnologia de
+          ponta e foco total no resultado do cliente."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="slide-01-footer">
+    <div class="footer-info">
+      <span>PAGE : 13</span>
+      <span class="separator">|</span>
+      <span>CACHINA PRESENTATION TEMPLATE</span>
+      <span class="separator">|</span>
+      <span>CUSTOMERS_2026</span>
+    </div>
+  </footer>
+</div>
     `;
 }
 
