@@ -306,3 +306,162 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+/* =============================================================
+   PÁGINA 02: VALORES (RESPONSIVIDADE BLINDADA TOTAL)
+   ============================================================= */
+
+.slide-02-container.values-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+  height: 100vh;
+  height: 100dvh; /* Altura dinâmica para iOS */
+  width: 100vw;
+  background-color: #0a1128;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* FUNDO E BRILHOS (IDÊNTICO AO SLIDE 01) */
+.slide-02-container.values-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slide-02-container.values-page::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* ... (Mantenha seus estilos de .sidebar-identity, .value-card, etc aqui) ... */
+
+/* =============================================================
+   6. RESPONSIVIDADE (VERTICAL - MOBILE & TABLET)
+   ============================================================= */
+@media (max-width: 1024px) {
+  .slide-02-container.values-page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    padding: 60px 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+  }
+
+  /* Remove efeitos pesados no mobile para fluidez */
+  .slide-02-container.values-page::before,
+  .slide-02-container.values-page::after {
+    display: none;
+  }
+
+  .sidebar-identity {
+    min-width: 100%;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .values-content {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards-wrapper {
+    flex-direction: column; /* Empilha os cards */
+    gap: 20px;
+  }
+
+  .value-card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .slide-01-footer {
+    position: relative;
+    margin-top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* =============================================================
+   7. RESPONSIVIDADE (HORIZONTAL - LANDSCAPE)
+   ============================================================= */
+@media (max-height: 550px) and (orientation: landscape) {
+  .slide-09container.values-page {
+    height: auto;
+    min-height: 100dvh;
+    padding: 30px;
+    flex-direction: row; /* Volta para row para aproveitar a largura */
+    align-items: flex-start;
+  }
+
+  .sidebar-identity {
+    min-width: 200px;
+    border-right: 1px solid rgba(14, 165, 233, 0.2);
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .sidebar-identity .mini-logo {
+    width: 120px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .cards-wrapper {
+    flex-direction: row; /* Cards lado a lado no landscape */
+    flex-wrap: wrap; /* Quebra se não couber */
+    justify-content: center;
+  }
+
+  .value-card {
+    flex: 1 1 200px; /* Base de 200px mas pode crescer */
+    padding: 20px 15px;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .value-card p {
+    font-size: 0.8rem;
+  }
+}
