@@ -401,8 +401,7 @@ body,
   .slide-12-container,
   .slide-14-container,
   .slide-15-container,
-  .slide-16-container,
-  .slide-cloudbox-container {
+  .slide-16-container {
     /* 1. Resolve o bug do 100vh no Samsung/Android */
     display: flex !important;
     flex-direction: column !important;
