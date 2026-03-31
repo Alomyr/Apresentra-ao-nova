@@ -43,47 +43,33 @@
   filter: blur(80px);
   z-index: 0;
 }
-
-/* ================= 2. COLUNA CENTRAL (GRADE DE LOGOS) ================= */
 /* ================= 2. COLUNA CENTRAL (INFINITE CAROUSEL) ================= */
 .slide-13-center {
   z-index: 2;
   width: 100%;
-  overflow: hidden; /* Garante que nada saia da área central */
+  overflow: hidden;
   position: relative;
 }
 
-/* Máscara de desfoque nas laterais (opcional, dá um ar premium) */
 .logo-slider {
   position: relative;
   width: 100%;
   padding: 20px 0;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
+  /* Máscara suave para as pontas */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 .logo-track {
   display: flex;
   align-items: center;
-  /* Cálculo: (Largura do item 200px) * (Quantidade de itens originais 5) */
-  width: calc(200px * 10);
+  /* 5 logos originais * 200px largura */
+  width: calc(200px * 10); 
   animation: scrollInfinito 15s linear infinite;
 }
 
 .logo-item {
-  width: 200px; /* Largura consistente para o cálculo da animação */
+  width: 200px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -92,36 +78,32 @@
 }
 
 .logo-item img {
-  max-width: 120px;
-  max-height: 80px;
+  max-width: 130px; /* Aumentei um pouco para destaque */
+  max-height: 90px;
   object-fit: contain;
-  filter: saturate(0.8); /* Ficam levemente menos saturados por padrão */
-  opacity: 0.9;
-  transition: all 0.3s ease;
+  
+  /* REMOÇÃO DE FILTROS: Aqui garantimos a cor */
+  filter: none !important; 
+  -webkit-filter: grayscale(0%) !important;
+  opacity: 1 !important;
+  
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .logo-item img:hover {
-  filter: saturate(1.2) brightness(1.1); /* Ganham cor viva e brilho no hover */
-  opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.15); /* Efeito "pop" ao passar o mouse */
+  filter: brightness(1.1) !important;
 }
 
-/* O Segredo do Vídeo: Movimento Linear Contínuo */
+/* Animação Infinita */
 @keyframes scrollInfinito {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Move exatamente a largura total de UM grupo de logos */
-    transform: translateX(calc(-200px * 5));
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-200px * 5)); }
 }
 
-/* Pausa suave no hover */
 .logo-slider:hover .logo-track {
   animation-play-state: paused;
 }
-
 /* Ajuste Responsivo para o Carrossel */
 @media (max-width: 768px) {
   .logo-item {
