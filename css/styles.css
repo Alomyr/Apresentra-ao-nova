@@ -475,3 +475,71 @@ body,
     height: 100vh !important;
   }
 }
+
+/* ================= FIX CARROSSEL MOBILE/SAFARI ================= */
+
+@media (max-width: 992px) {
+  /* Força o container do slide 13 a aceitar conteúdo flexível */
+  .slide-13-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100dvh !important;
+    padding: 40px 20px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Garante que o container do meio ocupe espaço e seja visível */
+  .slide-13-center {
+    display: block !important;
+    width: 100% !important;
+    min-height: 120px !important; /* Altura mínima para o Safari "enxergar" */
+    margin: 20px 0 !important;
+    position: relative !important;
+    order: 2 !important; /* Garante que fique entre o título e o rodapé */
+    overflow: visible !important; 
+    z-index: 20 !important;
+  }
+
+  /* Ajuste do Slider para sangrar na tela (opcional) */
+  .logo-slider-s13 {
+    width: 100vw !important;
+    margin-left: -20px !important; 
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Força a largura da track para o Safari não colapsar os itens */
+  .logo-track-s13 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 1500px !important; /* 10 itens * 150px */
+    animation: scrollS13-mob 15s linear infinite !important;
+  }
+
+  .logo-item-s13 {
+    width: 150px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .logo-item-s13 img {
+    width: 100px !important;
+    height: auto !important;
+    max-height: 60px !important;
+    display: block !important;
+    opacity: 1 !important;
+    filter: none !important; /* Safari às vezes buga com filtros em animações */
+  }
+}
+
+/* Keyframe específico para mobile para evitar saltos */
+@keyframes scrollS13-mob {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-750px, 0, 0); } /* Metade de 1500px */
+}
