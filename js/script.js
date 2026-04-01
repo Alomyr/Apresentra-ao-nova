@@ -1570,15 +1570,43 @@ function clientsSlide() {
 
 <div class="slide-13-center">
   <div class="logo-slider-s13"> <div class="logo-track-s13"> <div class="logo-item-s13"><img src="icons/logos/Dropped Image (2).png" alt=""></div>
-      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (3).png" alt=""></div>
-      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (12).png" alt=""></div>
       <div class="logo-item-s13"><img src="icons/logos/Dropped Image.png" alt=""></div>
-      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (5).png" alt=""></div>
-      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (2).png" alt=""></div>
       <div class="logo-item-s13"><img src="icons/logos/Dropped Image (3).png" alt=""></div>
-      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (12).png" alt=""></div>
-      <div class="logo-item-s13"><img src="icons/logos/Dropped Image.png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (4).png" alt=""></div>
       <div class="logo-item-s13"><img src="icons/logos/Dropped Image (5).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (6).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (7).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (8).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (9).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (10).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (11).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (12).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (13).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (14).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/202007170114_GQUy_.avif" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/WhatsApp Image 2026-03-25 at 10.21.33 AM.jpeg" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/WhatsApp_Image_2026-03-24_at_7.55.22_AM-removebg-preview.png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/logoviva.png" alt=""></div>
+
+
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image.png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (3).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (4).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (5).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (6).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (7).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (8).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (9).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (10).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (11).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (12).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (13).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/Dropped Image (14).png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/202007170114_GQUy_.avif" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/WhatsApp Image 2026-03-25 at 10.21.33 AM.jpeg" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/WhatsApp_Image_2026-03-24_at_7.55.22_AM-removebg-preview.png" alt=""></div>
+      <div class="logo-item-s13"><img src="icons/logos/logoviva.png" alt=""></div>
+      
     </div>
   </div>
 </div>
