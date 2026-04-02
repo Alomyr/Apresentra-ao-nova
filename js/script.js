@@ -1844,7 +1844,7 @@ function contactSlide() {
             <div class="info-icon"><i class="fa-brands fa-linkedin"></i></div>
             <div class="info-text">
               <label>LinkedIn</label>
-              <span>@Grupo Cachina</span>
+              <span>/empresa/grupo-cachina</span>
             </div>
           </div>
         </div>
