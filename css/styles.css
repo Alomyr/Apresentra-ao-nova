@@ -555,3 +555,285 @@ nav a:hover {
 .dropdown:hover::after {
   display: block;
 }
+/* Contêiner principal do Hero */
+.hero-main-content {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente a foto com o texto */
+  justify-content: center; /* Centraliza o conjunto na tela */
+  gap: 40px; /* Espaço entre a foto e o texto */
+  margin-bottom: 30px;
+  text-align: left; /* Garante que o texto fique alinhado à esquerda dentro do bloco */
+}
+
+/* Ajuste da foto para não quebrar */
+.sidebar-identity {
+  flex-shrink: 0; /* Impede que a foto diminua se o texto for grande */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajuste do bloco de texto */
+.hero-text-block {
+  max-width: 600px; /* Limita a largura para manter a legibilidade */
+}
+
+/* Responsividade: No celular, eles voltam a ficar um em cima do outro */
+@media (max-width: 768px) {
+  .hero-main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.avatar-gradient-border {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1, #0a1128);
+  box-shadow:
+    0 0 35px rgba(99, 102, 241, 0.3),
+    0 0 80px rgba(14, 165, 233, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite;
+}
+
+.avatar-gradient-border img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.person-info {
+  text-align: center;
+}
+
+.person-info h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+/* estilo do inicio
+
+/* Container que organiza os dois lados */
+.hero-layout-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o centro da foto com o texto */
+  justify-content: center; /* Centraliza o conjunto na página */
+  gap: 60px; /* Espaçamento entre a foto e o texto */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* Alinha o texto à esquerda para combinar com o novo layout */
+}
+
+/* Garante que a foto não encolha */
+.hero-sidebar-identity {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajusta o tamanho da foto para não dominar a tela inteira se necessário */
+.avatar-gradient-border {
+  width: 220px; /* Ajuste conforme o seu gosto */
+  height: 220px;
+}
+
+/* Alinhamento do Bloco de Texto */
+.hero-text-block {
+  max-width: 800px;
+  text-align: justify; /* Alinha o texto em ambos os lados */
+}
+
+.hero-text-block h1 {
+  margin-top: 0; /* Remove espaço extra no topo */
+  text-align: justify; /* Alinha o texto em ambos os lados */
+}
+
+/* Responsividade: Volta ao normal no celular */
+@media (max-width: 900px) {
+  .hero-layout-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+.hero-text-block p {
+  text-align: justify;
+  color: var(--text-gray); /* Mantendo sua cor original */
+}
+.hero-text-block p {
+  text-align: justify;
+  hyphens: auto; /* Adiciona hífens automaticamente se necessário */
+  lang: pt-br; /* Importante para o navegador saber onde cortar as palavras */
+}
+
+/* --- SEÇÃO IMPACTO --- */
+.impact-section {
+  padding: 80px 10%;
+  background: rgba(10, 17, 40, 0.5);
+}
+
+.impact-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.impact-text {
+  flex: 1;
+  text-align: left;
+}
+.impact-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.impact-text h2 span {
+  color: var(--accent-cyan);
+}
+
+.impact-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat-item h4 {
+  font-size: 2rem;
+  color: var(--accent-cyan);
+  margin-bottom: 5px;
+}
+
+/* Gráfico Animado */
+.impact-visual {
+  flex: 1;
+  background: rgba(16, 42, 67, 0.2);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+}
+
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 200px;
+  gap: 10px;
+}
+
+.chart-bar {
+  width: 40px;
+  background: rgba(0, 229, 255, 0.2);
+  border-radius: 8px 8px 0 0;
+  transition: 0.5s;
+  animation: grow 1.5s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+}
+
+.chart-bar.active {
+  background: linear-gradient(to top, var(--accent-blue), var(--accent-cyan));
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- SEÇÃO TECH SERVICES (CARDS) --- */
+.tech-services {
+  padding: 60px 10%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  background: rgba(16, 42, 67, 0.4);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  padding: 40px;
+  border-radius: 24px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-cyan);
+}
+
+/* Bordas coloridas para diferenciar */
+.tech-card.support {
+  border-left: 5px solid #6366f1;
+}
+.tech-card.vdi {
+  border-left: 5px solid var(--accent-cyan);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.tech-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.tech-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.tech-list li {
+  margin-bottom: 10px;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-list li::before {
+  content: "✓";
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+  .impact-container,
+  .services-grid {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}
