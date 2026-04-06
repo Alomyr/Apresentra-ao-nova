@@ -1,0 +1,84 @@
+/* --- SEÇÃO FAQ --- */
+.faq-section {
+  padding: 80px 10%;
+  position: relative;
+}
+
+.faq-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-grid {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: rgba(16, 42, 67, 0.2);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.faq-item:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(16, 42, 67, 0.4);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px 25px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.faq-icon {
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-out,
+    padding 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.faq-answer p {
+  padding: 0 25px 20px 25px;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Estado Ativo (JS adicionará a classe .active) */
+.faq-item.active {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* Transforma o + em x */
+  color: #ff4d4d; /* Opcional: muda cor ao abrir */
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Ajuste conforme o tamanho do texto */
+  padding-top: 10px;
+}
