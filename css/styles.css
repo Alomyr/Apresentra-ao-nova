@@ -681,7 +681,6 @@ nav a:hover {
 .hero-text-block p {
   text-align: justify;
   hyphens: auto; /* Adiciona hífens automaticamente se necessário */
-  lang: pt-br; /* Importante para o navegador saber onde cortar as palavras */
 }
 
 /* --- SEÇÃO IMPACTO --- */
