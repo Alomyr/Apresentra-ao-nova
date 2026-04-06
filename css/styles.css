@@ -836,3 +836,34 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* Ajuste para que a seção flua com o restante do site */
+.slide-15s-container {
+  display: flex; /* Mudei de grid para flex para facilitar a centralização */
+  justify-content: center;
+  align-items: center;
+  padding: 40px 5%;
+  min-height: 400px; /* Removido o 100dvh fixo */
+  width: 100%;
+  position: relative;
+  background-color: transparent; /* Deixe o fundo do body agir */
+  color: #ffffff;
+  overflow: visible; /* Permitir que o hover (translateY) apareça */
+}
+
+.slide-15s-center {
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+/* Ajuste da linha da timeline para não ficar torta */
+.timeline-line {
+  position: absolute;
+  top: 35px; /* Ajuste conforme a altura do .step-number */
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, #0ea5e9, #6366f1, #f97316, #22c55e);
+  opacity: 0.3;
+  z-index: 0;
+}
