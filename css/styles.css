@@ -3,7 +3,8 @@
   --accent-cyan: #00e5ff;
   --accent-blue: #00b4d8;
   --text-gray: #a0a0a0;
-  --grid-color: rgba(0, 229, 255, 0.05);
+  /* Reduzi a opacidade para 0.03 para evitar o efeito de "vibração" nas linhas */
+  --grid-color: rgba(0, 229, 255, 0.03);
 }
 
 * {
@@ -19,8 +20,87 @@ body {
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
+  background-position: top; /* Alinha o início do grid com o canto da tela */
+  background-attachment: fixed; /* O grid não "corre" nem entorta no scroll */
   color: white;
   line-height: 1.6;
+  min-height: 100vh;
+}
+
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+.wave-divider path {
+  fill: #ffffff; /* cor da linha */
+}
+
+/* opcional: sobrepor suave */
+.wave-divider.top {
+  margin-bottom: -5px;
+}
+
+.wave-divider.bottom {
+  margin-top: -5px;
+}
+
+.automation-background-icon {
+  filter: blur(12px);
+  opacity: 0.2;
+
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 40%,
+    transparent 80%
+  );
+}
+.hero {
+  background:
+    radial-gradient(circle at center, rgba(0, 229, 255, 0.15), transparent 60%),
+    linear-gradient(to bottom, #020617 0%, #020617 60%, #0a1128 100%);
+}
+
+.section-dark {
+  background: #0b0f14;
+  position: relative;
+}
+
+.section-dark::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  background: linear-gradient(to bottom, transparent, #0b0f14);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 229, 255, 0.2),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+  pointer-events: none;
 }
 
 header {
@@ -301,6 +381,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 25px;
+  max-width: 3000px;
+  margin: 0 auto;
 }
 
 /* Ajuste nos cards para ficarem bem dentro do contorno preto */
@@ -381,9 +463,9 @@ nav a:hover {
   position: absolute;
   top: 50%; /* Centraliza verticalmente */
   left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%) rotate(-15deg); /* Ajuste de rotação e centralização */
+  transform: translate(-50%, -50%); /* Centralização sem rotação */
 
-  width: 1500px; /* Tamanho grande */
+  width: 1900px; /* Tamanho grande */
   height: auto;
 
   /* Define que ele fique por trás do texto e botões */
@@ -866,4 +948,811 @@ nav a:hover {
   background: linear-gradient(90deg, #0ea5e9, #6366f1, #f97316, #22c55e);
   opacity: 0.3;
   z-index: 0;
+}
+/* --- LAYOUT DE LINHAS (ESTILO G. TRIGUEIRO) --- */
+.feature-row {
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.feature-row.reverse .feature-container {
+  flex-direction: row-reverse;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-tag {
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.feature-content h2 {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.feature-content p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* --- LISTA E MINI STATS --- */
+.feature-list {
+  list-style: none;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.feature-list li::before {
+  content: "→";
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+.mini-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mini-stat h4 {
+  font-size: 1.8rem;
+  color: var(--accent-cyan);
+}
+
+/* --- FRAME DE IMAGEM TECH --- */
+.feature-image {
+  flex: 1;
+  position: relative;
+}
+
+.image-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.image-frame img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-frame:hover img {
+  transform: scale(1.05);
+}
+
+.frame-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .feature-container,
+  .feature-row.reverse .feature-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .feature-content h2 {
+    font-size: 2rem;
+  }
+}
+
+/*Card box principal*/
+
+/* Container Principal */
+.orbit-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo Central */
+.central-logo {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+.central-logo img {
+  width: 80%;
+}
+
+/* Órbitas */
+.orbit {
+  position: absolute;
+  border: 1px solid var(--orbit-border);
+  border-radius: 50%;
+  animation: rotate linear infinite;
+}
+
+.orbit-1 {
+  width: 280px;
+  height: 280px;
+  animation-duration: 20s;
+}
+.orbit-2 {
+  width: 420px;
+  height: 420px;
+  animation-duration: 35s;
+}
+
+/* Ícones das Tecnologias */
+.tech-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  /* Cancela a rotação do pai para o ícone não ficar de ponta cabeça */
+  animation: counter-rotate linear infinite;
+}
+
+/* Posicionamento dos ícones na circunferência */
+.orbit-1 .tech-icon {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.orbit-2 .tech-icon:nth-child(1) {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.orbit-2 .tech-icon:nth-child(2) {
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.orbit-2 .tech-icon:nth-child(3) {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animações */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counter-rotate {
+  from {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+}
+
+/* Ajuste específico para as durações acompanharem os pais */
+.orbit-1 .tech-icon {
+  animation-duration: 20s;
+}
+.orbit-2 .tech-icon {
+  animation-duration: 35s;
+}
+
+/* --- SEÇÃO DE CARDS ESTILO B2BIT --- */
+.tech-cards-section {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-card {
+  position: relative; /* Base para os elementos absolutos */
+  height: 350px; /* Defina uma altura fixa para o card */
+  background: #0d1526;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+/* Faz a imagem ocupar 100% do card */
+.card-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay de vidro (escondido) */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 17, 40, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  opacity: 0;
+  z-index: 3; /* Fica acima de tudo no hover */
+  transition: all 0.4s ease;
+  transform: translateY(100%); /* Vem de baixo para cima */
+}
+
+/* Conteúdo (Tag e Título) flutuando no rodapé do card */
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 2; /* Acima da imagem, abaixo do overlay de hover */
+  background: linear-gradient(to top, rgba(10, 17, 40, 0.9), transparent);
+  transition: opacity 0.3s ease;
+}
+
+/* --- ESTADOS DE HOVER --- */
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-cyan);
+}
+
+/* Mostra o overlay com o texto descritivo */
+.custom-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Esconde o título original para não dar conflito visual com o texto do overlay */
+.custom-card:hover .card-content {
+  opacity: 0;
+}
+
+.custom-card:hover .card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Container do Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* O Card Principal */
+.custom-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Wrapper da Imagem e Overlay */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #0f172a; /* Fundo escuro para destacar a imagem */
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* O Efeito de Vidro (Overlay) */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 17, 40, 0.85); /* Tom azul escuro transparente */
+  backdrop-filter: blur(8px); /* Efeito de desfoque igual ao vídeo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0; /* Invisível por padrão */
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+  transform: translateY(20px); /* Começa um pouco abaixo */
+}
+
+.overlay-text {
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Trigger da Animação no Hover */
+.custom-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-card:hover .card-image-wrapper img {
+  transform: scale(1.1); /* Zoom suave na imagem de fundo */
+}
+
+/* Conteúdo abaixo da imagem */
+.card-content {
+  padding: 20px;
+  background: transparent;
+}
+
+.card-tag {
+  color: var(--accent-cyan);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.cards-grid {
+  display: grid;
+  /* Força 4 colunas de tamanho igual */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Reduzi levemente o gap para caber melhor */
+  width: 100%;
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+/* Ajuste na altura da imagem para os cards não ficarem muito longos na vertical */
+.card-image-wrapper {
+  width: 100%;
+  height: 160px; /* Reduzido de 200px para equilibrar o design horizontal */
+}
+
+/* Responsividade: Como 4 cards em linha ficam muito estreitos no tablet/celular */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* 1 por linha no celular */
+  }
+}
+
+.custom-card {
+  background: #0d1526; /* Um tom acima do seu bg-dark para dar contraste */
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Container da Imagem */
+/* Container da Imagem */
+.card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* O OVERLAY (Efeito Vidro + Texto Oculto) */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Gradiente escuro + Blur (efeito do vídeo) */
+  background: rgba(10, 17, 40, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  /* Esconde o texto inicialmente */
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.4s ease-in-out;
+  pointer-events: none; /* Evita que o overlay atrapalhe cliques antes do hover */
+}
+
+.card-overlay p {
+  color: white;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0; /* Remove margem que possa quebrar o layout centralizado */
+}
+
+/* --- ESTADOS DE HOVER --- */
+
+/* Quando passar o mouse no CARD, o overlay aparece */
+.custom-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Zoom na imagem ao fundo */
+.custom-card:hover .card-image-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Ajuste na Card Content (onde fica o Título e a Tag) */
+.card-content {
+  padding: 20px;
+  /* Removido o p daqui no HTML, então o layout ficará limpo */
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: white;
+}
+
+.card-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.card-link span {
+  transition: transform 0.3s ease;
+}
+
+/* --- ANIMAÇÕES AO PASSAR O MOUSE (HOVER) --- */
+.custom-card:hover {
+  transform: translateY(-15px); /* Efeito de subir */
+  border-color: var(--accent-cyan);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.custom-card:hover .card-image-wrapper img {
+  transform: scale(1.1); /* Zoom suave na imagem */
+}
+
+.custom-card:hover .card-link {
+  color: var(--accent-cyan);
+}
+
+.custom-card:hover .card-link span {
+  transform: translateX(5px); /* Seta mexe para o lado */
+}
+
+/* Estilo para um card que já inicia em destaque */
+.custom-card.active {
+  border-color: var(--accent-cyan);
+  background: rgba(16, 42, 67, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
+
+/* Container Principal Lado a Lado */
+.dual-layout-section {
+  padding: 80px 5%;
+  background: rgba(10, 17, 40, 0.3);
+}
+
+.dual-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  background: rgba(16, 42, 67, 0.2);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.dual-column {
+  flex: 1;
+  padding: 40px;
+}
+
+.border-left {
+  border-left: 1px solid rgba(0, 229, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.column-header h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.column-header span {
+  color: var(--accent-cyan);
+}
+
+/* Estilo da Jornada Vertical */
+.journey-steps-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.v-step {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.v-step:hover {
+  background: rgba(0, 229, 255, 0.05);
+  transform: translateX(10px);
+}
+
+.v-step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-cyan);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Estilo do Ecossistema Vertical */
+.ecosystem-vertical-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.eco-item {
+  background: rgba(16, 42, 67, 0.5);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.eco-item h4 {
+  color: var(--accent-cyan);
+  margin-bottom: 5px;
+}
+
+.v-arrow {
+  color: var(--accent-cyan);
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+/* Responsividade: No celular fica um em cima do outro */
+@media (max-width: 900px) {
+  .dual-container {
+    flex-direction: column;
+  }
+  .border-left {
+    border-left: none;
+    border-top: 1px solid rgba(0, 229, 255, 0.1);
+  }
+}
+
+/* Container do Card de Tecnologia */
+.tech-stack-section {
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.tech-stack-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(16, 42, 67, 0.2);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  padding: 60px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+}
+
+/* Lado do Texto */
+.tech-stack-info {
+  flex: 1;
+}
+
+.tech-stack-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.tech-stack-info h2 span {
+  color: var(--accent-cyan);
+}
+
+.tech-stack-info p {
+  color: var(--text-gray);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.tech-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Lado Visual (Órbita) */
+.tech-stack-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Garante que a órbita não "vaze" do card */
+  min-height: 450px;
+}
+
+/* Ajustes finos na sua órbita para caber no container */
+.orbit-container {
+  transform: scale(0.85); /* Ajusta o tamanho se necessário */
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+  .tech-stack-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .tech-badges {
+    justify-content: center;
+  }
+
+  .tech-stack-visual {
+    min-height: auto;
+    margin-top: 40px;
+  }
+
+  .orbit-container {
+    transform: scale(0.7); /* Reduz um pouco mais no mobile */
+  }
+}
+
+/* Filtro para deixar os logos cinzas */
+.logo-item-s13 img {
+  filter: grayscale(100%);
+  opacity: 0.6; /* Deixa um pouco mais sutil/transparente */
+  transition: all 0.4s ease; /* Transição suave para quando passar o mouse */
+}
+
+/* Efeito ao passar o mouse: o logo volta a ter cor e destaque */
+.logo-item-s13:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1); /* Leve aumento para dar feedback visual */
 }
