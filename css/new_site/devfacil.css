@@ -2,3 +2,270 @@
   border-color: #00b4d8; /* Um tom de azul levemente diferente */
   box-shadow: 0 0 30px rgba(0, 180, 216, 0.2);
 }
+.comparison-section {
+    padding: 80px 5%;
+    /* background-color: #0b0f1a; Fundo profundo para destacar */
+    color: #F5F7FA;
+}
+
+.comparison-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.comparison-text { flex: 1; min-width: 350px; }
+
+.tag-devfacil {
+    background: #378cbb;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.comparison-text h1 {
+    font-size: 2.8rem;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.comparison-text h1 span { color: #378cbb; }
+
+.check-list { list-style: none; margin-top: 30px; }
+.check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+.check-list li span { color: #378cbb; font-weight: bold; }
+
+/* CARDS PROBLEMA VS SOLUÇÃO */
+.cards-wrapper {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.comp-card {
+    background: #1F2933;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-solucao {
+    border: 2px solid #378cbb;
+    box-shadow: 0 0 20px rgba(55, 140, 187, 0.2);
+}
+
+.card-header h3 { font-size: 0.9rem; margin-bottom: 5px; }
+.card-header p { font-size: 0.8rem; color: #94a3b8; margin-bottom: 15px; }
+
+.card-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    filter: brightness(0.8);
+}
+
+.item-list { list-style: none; padding: 0; }
+.item-list li {
+    font-size: 0.85rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    gap: 8px;
+}
+
+.card-problema .item-list li span { color: #ef4444; }
+.card-solucao .item-list li span { color: #378cbb; }
+
+.transition-arrow {
+    background: #378cbb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    z-index: 2;
+}
+
+/* BARRA DE PROCESSO */
+.process-bar {
+    margin: 60px auto;
+    max-width: 1600px;
+    background: #1e43732d;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.step { flex: 1; font-size: 0.85rem; position: relative; }
+.step span { color: #378cbb; font-size: 1.2rem; display: block; margin-bottom: 5px; }
+
+.central { justify-content: center; margin-top: 40px; }
+
+@media (max-width: 992px) {
+    .cards-wrapper { flex-direction: column; }
+    .transition-arrow { transform: rotate(90deg); }
+    .process-steps { flex-wrap: wrap; gap: 20px; }
+    .step { min-width: 45%; }
+}
+
+.positioning-statement {
+    max-width: 1600px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(30, 67, 115, 0.1) 0%, rgba(31, 41, 51, 0.2) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(55, 140, 187, 0.2);
+}
+
+.tag-outline {
+    border: 1px solid #378cbb;
+    color: #378cbb;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.positioning-statement h2 {
+    font-size: 2.2rem;
+    margin: 25px 0;
+}
+
+.positioning-statement h2 span {
+    color: #378cbb;
+}
+
+.logic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.logic-item {
+    background: rgba(31, 41, 51, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #378cbb;
+}
+
+.statement-footer {
+    font-style: italic;
+    color: #94a3b8;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.pain-diagnosis {
+    padding: 100px 5%;
+    /* background: #F5F7FA; Fundo claro para contrastar com as seções azuis */
+    color: #1F2933;
+}
+
+.diagnosis-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.diagnosis-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.diagnosis-header h2 {
+    font-size: 2.5rem;
+    color: #1e4373;
+    margin-bottom: 20px;
+}
+
+.diagnosis-header h2 span {
+    color: #378cbb;
+}
+
+.diagnosis-header p {
+    font-size: 1.1rem;
+    color: #475a6b;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.symptom-item {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(55, 140, 187, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.symptom-item:hover {
+    transform: translateY(-5px);
+    border-color: #378cbb;
+}
+
+.symptom-icon {
+    font-size: 1.5rem;
+    background: rgba(55, 140, 187, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.symptom-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #1F2933;
+}
+
+.diagnosis-footer {
+    text-align: center;
+    background: #1e4373;
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.diagnosis-footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    .diagnosis-header h2 { font-size: 1.8rem; }
+    .symptoms-grid { grid-template-columns: 1fr; }
+}
