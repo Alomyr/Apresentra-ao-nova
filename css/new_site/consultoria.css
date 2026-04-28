@@ -956,7 +956,7 @@ section {
 }
 
 /* Ajustes para Mobile */
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .method-arrow {
     display: none; /* Esconde as setas em telas menores para não quebrar o layout */
   }
@@ -1101,7 +1101,7 @@ section {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .warning-item {
     flex-direction: column;
     gap: 10px;
@@ -1171,11 +1171,197 @@ section {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .innovation-container {
     padding: 40px 20px;
   }
   .innovation-main-text p {
     font-size: 1.1rem;
   }
+}
+
+.consultancy-impact {
+  padding: 100px 5%;
+  background: #0a0f1a;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  margin-top: 60px;
+  align-items: start;
+}
+
+.transformation-card {
+  background: linear-gradient(145deg, rgba(0, 229, 255, 0.1), rgba(15, 23, 42, 0.5));
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  margin-bottom: 25px;
+}
+
+.transformation-card h3 {
+  color: #378cbb;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefits-check-list h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.benefits-grid-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.benefit-item span {
+  font-family: 'Material Icons', sans-serif; /* Ou use um emoji se preferir */
+  color: #00ff88; /* Verde neon para o check */
+  font-weight: bold;
+}
+
+.benefit-item:hover {
+  background: rgba(0, 255, 136, 0.05);
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+@media (max-width: 992px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid-inner {
+    grid-template-columns: 1fr;
+  }
+}
+.pricing-offers {
+  padding: 100px 5%;
+  background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.05), transparent);
+}
+
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 60px auto 0;
+}
+
+.offer-card {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 50px 40px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.offer-card.featured {
+  background: linear-gradient(180deg, rgba(0, 229, 255, 0.1) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 2px solid #00e5ff;
+  box-shadow: 0 20px 40px rgba(0, 229, 255, 0.1);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00e5ff;
+  color: #000;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.offer-header h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.offer-header p {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.offer-list {
+  list-style: none;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.offer-list li {
+  color: #e2e8f0;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.offer-list li::before {
+  content: "→";
+  color: #00e5ff;
+  font-weight: bold;
+}
+
+.btn-offer {
+  text-decoration: none;
+  text-align: center;
+  padding: 18px;
+  border-radius: 15px;
+  font-weight: 700;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-offer:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-offer.premium {
+  background: #00e5ff;
+  color: #000;
+  border: none;
+}
+
+.btn-offer.premium:hover {
+  background: #00b8cc;
+  transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+  .offer-card { padding: 30px; }
 }
