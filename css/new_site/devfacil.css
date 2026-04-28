@@ -193,7 +193,7 @@
 
 .diagnosis-header h2 {
     font-size: 2.5rem;
-    color: #1e4373;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -203,7 +203,7 @@
 
 .diagnosis-header p {
     font-size: 1.1rem;
-    color: #475a6b;
+    color: #dadada;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -265,7 +265,97 @@
 }
 
 /* Ajuste para Mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .diagnosis-header h2 { font-size: 1.8rem; }
     .symptoms-grid { grid-template-columns: 1fr; }
+}
+.capabilities-section {
+    padding: 100px 5%;
+    /* background-color: #0b0f1a; Fundo azul quase preto */
+    color: #F5F7FA;
+    text-align: center;
+}
+
+.capabilities-header {
+    margin-bottom: 60px;
+}
+
+.capabilities-header h2 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.capabilities-header h2 span {
+    color: #378cbb;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.cap-card {
+    background: #1F2933; /* Cinza escuro da sua paleta */
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cap-card:hover {
+    transform: translateY(-10px);
+    border-color: #378cbb;
+    background: linear-gradient(145deg, #1F2933 0%, #1e4373 100%);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cap-icon {
+    font-size: 2rem;
+    color: #378cbb;
+    margin-bottom: 10px;
+}
+
+.cap-card h4 {
+    font-size: 1.25rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.cap-card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Card em destaque */
+.featured-cap {
+    border: 1px solid rgba(55, 140, 187, 0.4);
+    background: rgba(30, 67, 115, 0.2);
+}
+
+/* Correção da seção de Diagnóstico (Removendo o fundo branco anterior) */
+.pain-diagnosis {
+    /* background: #141b24 !important; Cinza azulado muito escuro */
+    color: #F5F7FA !important;
+}
+
+.symptom-item {
+    background: #1F2933 !important; /* Mantendo consistência */
+    border: 1px solid rgba(55, 140, 187, 0.1) !important;
+    color: #F5F7FA !important;
+}
+
+.symptom-item p {
+    color: #cbd5e1 !important;
+}
+
+.symptom-item p strong {
+    color: #378cbb;
 }
