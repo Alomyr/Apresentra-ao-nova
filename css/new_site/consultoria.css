@@ -970,3 +970,212 @@ section {
     height: auto;
   }
 }
+.target-audience {
+  padding: 100px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.audience-grid {
+  display: grid;
+  /* Cria 3 colunas no desktop, mas se ajusta conforme o espaço */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.audience-card {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; /* Ícone em cima do texto para melhor equilíbrio */
+  align-items: center;    /* Centraliza os itens */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.audience-card:hover {
+  background: rgba(0, 229, 255, 0.08);
+  border-color: rgba(0, 229, 255, 0.5);
+  transform: translateY(-10px); /* Sobe levemente em vez de apenas crescer */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.audience-card span {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: block;
+  background: rgba(0, 229, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%; /* Transforma o emoji em um botão circular */
+  transition: 0.3s;
+}
+
+.audience-card:hover span {
+  transform: scale(1.2);
+  background: rgba(0, 229, 255, 0.2);
+}
+
+.audience-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300; /* Deixa o texto mais leve e elegante */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .audience-grid {
+    grid-template-columns: 1fr; /* Uma coluna no celular */
+    gap: 15px;
+  }
+}
+.warning-signs {
+  padding: 80px 5%;
+  /* background: linear-gradient(180deg, rgba(255, 166, 0, 0.05) 0%, transparent 100%); */
+  border-radius: 50px;
+  margin: 40px 0;
+}
+
+.tag-warning {
+  background: #ff4d4d;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.warning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.warning-item {
+  display: flex;
+  gap: 20px;
+  /* background: rgba(15, 23, 42, 0.6); */
+  padding: 30px;
+  border-radius: 24px;
+  border-left: 4px solid #ff4d4d;
+  transition: 0.3s;
+}
+
+.warning-item:hover {
+  /* background: rgba(255, 77, 77, 0.1); */
+  transform: translateX(10px);
+}
+
+.warning-number {
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(255, 77, 77, 0.3);
+  font-family: sans-serif;
+}
+
+.warning-text h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.warning-text p {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .warning-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.innovation-block {
+  padding: 100px 5%;
+  background: radial-gradient(circle at center, rgba(0, 229, 255, 0.03) 0%, transparent 70%);
+  text-align: center;
+}
+
+.innovation-container {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  background: rgba(15, 23, 42, 0.3);
+  padding: 60px 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+}
+
+.innovation-main-text p {
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+.innovation-main-text strong {
+  color: #378cbb;
+  font-weight: 600;
+}
+
+.innovation-examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.example-pill {
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.example-pill:hover {
+  background: rgba(0, 229, 255, 0.2);
+  transform: translateY(-5px);
+  border-color: #378cbb;
+}
+
+.innovation-footer p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .innovation-container {
+    padding: 40px 20px;
+  }
+  .innovation-main-text p {
+    font-size: 1.1rem;
+  }
+}
