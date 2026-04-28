@@ -1281,7 +1281,7 @@ section {
 
 .offer-card.featured {
   background: linear-gradient(180deg, rgba(0, 229, 255, 0.1) 0%, rgba(15, 23, 42, 0.8) 100%);
-  border: 2px solid #00e5ff;
+  border: 2px solid #378cbb;
   box-shadow: 0 20px 40px rgba(0, 229, 255, 0.1);
 }
 
@@ -1290,7 +1290,7 @@ section {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #00e5ff;
+  background: #378cbb;
   color: #000;
   padding: 5px 20px;
   border-radius: 20px;
@@ -1330,7 +1330,7 @@ section {
 
 .offer-list li::before {
   content: "→";
-  color: #00e5ff;
+  color: #378cbb;
   font-weight: bold;
 }
 
@@ -1352,16 +1352,53 @@ section {
 }
 
 .btn-offer.premium {
-  background: #00e5ff;
+  background: #378cbb;
   color: #000;
   border: none;
 }
 
 .btn-offer.premium:hover {
-  background: #00b8cc;
+  background: #378cbb;
   transform: scale(1.02);
 }
 
 @media (max-width: 992px) {
   .offer-card { padding: 30px; }
+}
+.offer-list {
+  list-style: none; /* Mantemos sem o ponto padrão para usar o símbolo personalizado */
+  margin: 20px 0 40px 0;
+  padding: 0; /* Remove padding que pode empurrar a lista para fora */
+  flex-grow: 1;
+  display: block !important; /* Garante que a lista não esteja com display: none */
+  overflow: visible; /* Garante que os itens não fiquem escondidos */
+}
+
+.offer-list li {
+  color: #e2e8f0;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  display: flex; /* Alinha o símbolo com o texto */
+  align-items: flex-start; /* Alinha o símbolo no topo caso o texto quebre linha */
+  gap: 12px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Criando o marcador visual (seta ou check) */
+.offer-list li::before {
+  content: "→"; 
+  color: #378cbb;
+  font-weight: bold;
+  flex-shrink: 0; /* Impede que o símbolo esmague em telas pequenas */
+}
+.offer-card {
+  height: auto; /* Deixa o card crescer conforme o texto */
+  min-height: 550px; /* Altura mínima para manter o alinhamento visual */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  overflow: visible; /* Permite que o conteúdo interno apareça livremente */
 }
