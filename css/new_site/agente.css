@@ -1,0 +1,279 @@
+
+.tag-outline {
+    border: 1px solid #378cbb;
+    color: #378cbb;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+/* Estilo do Fluxo de Ícones */
+.flow-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #378cbb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem; /* Aqui você pode trocar por ícones FontAwesome */
+  color: #378cbb;
+  /* background: rgba(55, 140, 187, 0.05); */
+}
+
+.flow-item span {
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #94a3b8;
+}
+
+.flow-sep {
+  color: #378cbb;
+  font-weight: bold;
+}
+
+/* Imagem da Baleia/Ilustração */
+.hero-main-img {
+  width: 100%;
+  max-width: 500px;
+  filter: drop-shadow(0 0 30px rgba(55, 140, 187, 0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-flow {
+    justify-content: center;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.comparison-results {
+  padding: 40px 5%;
+  /* background: #0a111f; Cor padrão do site Cachina */
+}
+
+.comparison-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Base dos Cards com Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: #378cbb; /* Azul Cachina no Hover */
+}
+
+.comp-card h4 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.comp-card h4 span {
+  display: block;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Listas de Comparação */
+.comp-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comp-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comp-list li span {
+  font-weight: bold;
+}
+
+/* Cores específicas dos ícones conforme imagem */
+.card-before .comp-list li span { color: #ff4d4d; } /* Vermelho para o antes */
+.card-after .comp-list li span { color: #378cbb; }  /* Azul para o depois */
+
+/* Card de Métricas */
+.card-metrics {
+  background: rgba(55, 140, 187, 0.08); /* Fundo levemente azulado */
+  border: 1px solid rgba(55, 140, 187, 0.2);
+}
+
+.metrics-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.metrics-list li {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.metrics-list li strong {
+  color: #378cbb;
+  font-size: 1.1rem;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 992px) {
+  .comparison-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Seção de Diagnóstico de Dor */
+.pain-diagnosis {
+  padding: 100px 5%;
+  background: #0a111f; /* Mantendo o fundo escuro */
+  color: #fff;
+}
+
+.diagnosis-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.diagnosis-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.diagnosis-header h2 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.diagnosis-header h2 span {
+  color: #378cbb;
+}
+
+.diagnosis-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* Grid de Sintomas */
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.symptom-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+}
+
+.symptom-item:hover {
+  border-color: #378cbb;
+  background: rgba(55, 140, 187, 0.05);
+}
+
+.symptom-icon {
+  font-size: 1.5rem;
+  filter: grayscale(100%); /* Mantém discreto, mas destaca no hover se quiser */
+}
+
+.symptom-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.symptom-item strong {
+  color: #fff;
+}
+
+/* Rodapé da Seção */
+.diagnosis-footer {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.diagnosis-footer p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.highlight-box {
+  margin-top: 30px;
+  background: #378cbb;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 20px rgba(55, 140, 187, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .diagnosis-header h2 { font-size: 1.8rem; }
+  .symptoms-grid { grid-template-columns: 1fr; }
+}
