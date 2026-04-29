@@ -667,10 +667,52 @@
     color: #378cbb;
 }
 
-/* Responsivo */
+/* Ajuste na seção para evitar que o conteúdo encoste nas bordas */
+.roi-section {
+    padding: 60px 5%;
+    overflow: hidden; /* Evita scroll horizontal indesejado */
+}
+
+/* Garante que a lista apareça corretamente */
+.roi-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.roi-list li {
+    font-size: 1rem;
+    line-height: 1.4;
+    align-items: flex-start; /* Alinha a seta ao topo do texto */
+}
+
+/* Responsividade Refinada */
 @media (max-width: 992px) {
     .roi-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Empilha as colunas */
+        gap: 30px;
+    }
+
+    .roi-questions {
+        padding: 25px; /* Reduz o padding em telas menores */
+    }
+
+    .roi-impact-cards {
+        flex-direction: column; /* Mantém empilhado, ou mude para 'row' se quiser lado a lado em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .roi-header h2 {
+        font-size: 1.8rem; /* Ajusta o título para celulares pequenos */
+    }
+
+    .roi-questions h4 {
+        font-size: 1.2rem;
+    }
+    
+    .roi-list li {
+        font-size: 0.9rem;
     }
 }
 
@@ -682,7 +724,6 @@
 .audience-container {
     max-width: 1600px;
     margin: 0 auto;
-      margin-bottom: 100px;
 
 }
 
@@ -768,10 +809,71 @@
         grid-template-columns: 1fr;
     }
 }
+/* Garante que a lista e os itens sejam visíveis */
+.audience-list li {
+    color: #cbd5e1 !important; /* Força a cor clara do texto */
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 
+.audience-list li span {
+    color: #378cbb !important; /* Força a cor do checkmark */
+}
+/* Força a exibição dos itens e evita o colapso */
+.audience-list {
+    display: block !important; /* Muda de flex para block se houver conflito */
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-top: 20px !important;
+}
+
+.audience-list li {
+    display: flex !important; /* Mantém o checkmark alinhado ao texto */
+    color: #cbd5e1 !important;
+    min-height: 20px; /* Garante que o item ocupe espaço */
+    margin-bottom: 15px !important;
+    text-align: left;
+}
+
+.audience-card {
+    height: auto !important; /* Remove qualquer restrição de altura */
+    min-height: 400px; /* Dá uma base visual para o card */
+    overflow: visible !important;
+}
+/* Ajuste de altura para evitar cortes em dispositivos móveis */
+.target-audience {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 60px 5% !important;
+}
+
+.audience-container {
+    margin-bottom: 40px !important; /* Reduz margem excessiva no mobile */
+}
+@media (max-width: 992px) {
+    .audience-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .audience-card {
+        padding: 25px !important; /* Reduz padding para dar mais espaço ao texto */
+        min-height: auto;
+    }
+
+    .audience-header h2 {
+        font-size: 1.8rem;
+    }
+}
+.audience-card {
+    position: relative;
+    z-index: 2;
+    overflow: visible; /* Garante que o conteúdo não seja clipado */
+}
 .decision-section {
     padding: 80px 5%;
-    background: #0b0f1a;
+    /* background: #0b0f1a; */
 }
 
 .decision-container {
@@ -870,6 +972,47 @@
         grid-template-columns: 1fr;
     }
 }
+/* Correção para visibilidade da lista de decisão */
+.decision-list {
+    display: block !important; /* Evita colapsos de flexbox */
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-top: 15px !important;
+}
+
+.decision-list li {
+    display: list-item !important; /* Garante que o item da lista se comporte como tal */
+    color: #94a3b8 !important; /* Cor cinza clara para o texto */
+    margin-bottom: 12px !important;
+    padding-left: 5px !important;
+}
+
+/* Garante que o texto em negrito dentro da lista também apareça */
+.decision-list li strong {
+    display: inline-block;
+    color: #378cbb !important; /* Azul para a coluna positiva */
+}
+
+.negative .decision-list li strong {
+    color: #ef4444 !important; /* Vermelho para a coluna negativa */
+}
+@media (max-width: 992px) {
+    .decision-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .decision-box {
+        height: auto !important; /* Permite que o card cresça conforme o texto */
+        min-height: 200px;
+        padding: 25px !important;
+    }
+
+    .decision-section {
+        padding: 40px 5% !important;
+    }
+}
 .capabilities-section {
     padding: 100px 5%;
     background: linear-gradient(180deg, #0b0f1a 0%, #0d121f 100%);
@@ -927,4 +1070,354 @@
 .featured-cap {
     border: 1px solid rgba(55, 140, 187, 0.3);
     background: rgba(55, 140, 187, 0.05);
+}
+
+.differentiation-block {
+    padding: 80px 5%;
+    background-color: #0f172a; /* Fundo escuro padrão do site */
+    color: #ffffff;
+}
+
+.diff-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.diff-main-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.diff-main-content h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.diff-main-content h2 span {
+    color: #378cbb; /* Azul Cachina */
+}
+
+.diff-description {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    line-height: 1.6;
+}
+
+.diff-subtext {
+    color: #64748b;
+    font-style: italic;
+}
+
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.diff-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(55, 140, 187, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.diff-card:hover {
+    transform: translateY(-5px);
+    border-color: #378cbb;
+    background: rgba(55, 140, 187, 0.05);
+}
+
+.diff-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.diff-card h4 {
+    color: #378cbb;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.diff-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+/* Container Principal conforme image_96664f.jpg */
+.next-step-section {
+  padding: 100px 5%;
+  /* background-color: #060b16; O tom de azul profundo do fundo da imagem */
+  color: #ffffff;
+}
+
+.next-step-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.next-step-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tag-top {
+  color: #378cbb;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.next-step-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.next-step-header h2 span {
+  color: #4390be; /* Tom ciano médio da imagem */
+}
+
+.next-step-header p {
+  color: #94a3b8;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid e Cards */
+.next-step-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.02); /* Transparência sutil */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px; /* Bordas bem arredondadas da imagem */
+  padding: 45px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Estilo RECOMENDADO com Glow e Borda Ciano */
+.step-card.featured {
+  border: 1.5px solid #378cbb;
+  background: rgba(10, 25, 47, 0.4);
+  box-shadow: 0 0 30px rgba(55, 140, 187, 0.15); /* Efeito de brilho sutil */
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #378cbb;
+  color: #060b16;
+  padding: 5px 22px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.step-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.step-intro {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Listagem com divisores sutis */
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.step-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04); /* Divisores horizontais da imagem */
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.step-list li span {
+  color: #378cbb;
+  font-weight: bold;
+}
+
+/* Botões idênticos ao Layout */
+.btn-step-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-step-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+}
+
+.btn-step-filled {
+  background: #4a9ecb; /* Azul ciano vivo do botão da imagem */
+  color: #060b16;
+  text-align: center;
+  padding: 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-step-filled:hover {
+  background: #378cbb;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .step-card { padding: 30px; }
+  .next-step-header h2 { font-size: 2rem; }
+}
+
+/* --- Ajustes de Responsividade --- */
+
+@media (max-width: 1024px) {
+  .next-step-grid {
+    gap: 40px; /* Aumenta o espaço entre os cards quando empilhados */
+  }
+  
+  .step-card {
+    max-width: 100%; /* Permite que o card use a largura total disponível */
+    min-width: unset; /* Remove a restrição que causa o erro no mobile */
+  }
+}
+
+@media (max-width: 992px) {
+  .next-step-section {
+    padding: 60px 20px; /* Reduz o padding lateral da seção */
+  }
+
+  .next-step-header h2 {
+    font-size: 1.8rem; /* Título menor para não quebrar em 3 linhas */
+  }
+
+  .step-card {
+    padding: 30px 20px; /* Reduz drasticamente o padding interno no mobile */
+    border-radius: 20px; /* Bordas levemente menores para harmonia */
+  }
+
+  .step-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .step-list li {
+    font-size: 0.85rem; /* Texto da lista levemente menor */
+    padding: 10px 0;
+  }
+
+  .btn-step-filled, .btn-step-outline {
+    width: 100%; /* Botões ocupam a largura toda no mobile (melhor para o polegar) */
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+}
+/* --- Ajuste Global dos Cards --- */
+.step-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha tudo no topo para permitir crescimento */
+  height: auto;                /* ESSENCIAL: Garante que o card cresça com o conteúdo */
+  min-height: 100%;            
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Garante que o conteúdo da lista empurre o botão para baixo */
+.step-content {
+  flex-grow: 1; 
+  display: block !important;   /* Evita que algum script ou regra oculte o conteúdo */
+  visibility: visible !important;
+}
+
+/* Força a lista a aparecer */
+.step-list {
+  display: block !important;
+  opacity: 1 !important;
+  margin: 20px 0 40px 0;
+  padding: 0;
+}
+
+/* --- Ajustes de Responsividade Mobile --- */
+@media (max-width: 992px) {
+  .next-step-grid {
+    flex-direction: column;    /* Empilha os cards um embaixo do outro */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .step-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    padding: 30px 20px;        /* Reduz o padding para sobrar espaço lateral */
+    height: auto !important;   /* Força altura automática no mobile */
+  }
+
+  .step-list {
+    display: block !important; /* Garante que a lista não suma no mobile */
+  }
+
+  .step-list li {
+    font-size: 0.9rem;
+    padding: 12px 0;           /* Espaçamento confortável para leitura no celular */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .btn-step-filled, .btn-step-outline {
+    width: 100%;
+    margin-top: 20px;          /* Garante que o botão não grude na lista */
+    position: relative;        /* Evita que o botão fique flutuando sobre o texto */
+  }
 }
