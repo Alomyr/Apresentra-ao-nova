@@ -91,3 +91,160 @@
   border-radius: 25px;
   text-decoration: none;
 }
+
+/* Container Principal do Hero */
+.about-hero-new {
+  padding: 120px 5% 60px 5%;
+  /* background: #01030a; Fundo escuro profundo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.hero-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  margin-bottom: 50px;
+   margin-top: 100px;
+
+}
+
+.hero-text-side { flex: 1; }
+
+.badge-quem-somos {
+  background: rgba(55, 140, 187, 0.3);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero-text-side h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.hero-text-side h1 span {
+  color: #378cbb; /* Azul destaque da imagem */
+}
+
+.hero-text-side p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 500px;
+}
+
+.hero-image-side { flex: 1; text-align: right; }
+.hero-image-side img {
+  width: 100%;
+  max-width: 1600px;
+  border-radius: 10px;
+  mask-image: linear-gradient(to left, black 80%, transparent 100%); /* Efeito de fade lateral */
+}
+
+/* Barra de Diferenciais (Card Azul) */
+.hero-features-bar {
+  background: linear-gradient(90deg, rgba(10, 20, 40, 0.9), rgba(5, 15, 30, 0.9));
+  border: 1px solid rgba(55, 140, 187, 0.3);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 30px;
+  width: 100%;
+  max-width: 1600px;
+  gap: 20px;
+}
+
+.feature-item { text-align: left; }
+.feature-item img { width: 30px; margin-bottom: 15px; filter: brightness(0) invert(1); }
+.feature-item h4 {
+  color: #fff;
+  font-size: 0.85rem;
+}
+.feature-item p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* Mensagem Final do Hero */
+.hero-footer-msg {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.icon-msg {
+  background: #378cbb;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.hero-footer-msg p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.hero-footer-msg strong { color: #fff; }
+
+.feature-item img { 
+  width: 30px; 
+  height: 30px; 
+  display: block;
+  margin-bottom: 15px;
+  /* Garante que o espaço da imagem seja reservado mesmo se ela não carregar */
+  min-height: 30px; 
+  background: transparent; 
+}
+
+.feature-item h4 {
+  /* Adiciona um clear ou garante que comece abaixo da área da imagem */
+  clear: both;
+  display: block;
+  margin-top: 10px;
+}
+/* Responsivo */
+@media (max-width: 992px) {
+  .hero-main-content { flex-direction: column; text-align: center; }
+  .hero-text-side p { margin: 0 auto; }
+  .hero-image-side { display: none; } /* Oculta em mobile para foco no texto */
+  .hero-features-bar { grid-template-columns: 1fr; }
+}
+/* Container Principal do Hero - Ajustado para posicionamento relativo */
+
+
+/* Lado da Imagem - Ajuste de posicionamento */
+.hero-image-side { 
+  flex: 0.8; 
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+
+
+.hero-image-side img.baleia-background-icon {
+  width: 120%; /* Aumenta um pouco para o efeito de fundo */
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.8; /* Ajuste a opacidade conforme a imagem de referência */
+  filter: drop-shadow(0 0 20px rgba(55, 140, 187, 0.2));
+  /* O mask-image ajuda a fundir a imagem com o fundo escuro à esquerda */
+  mask-image: linear-gradient(to left, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 70%, transparent 100%);
+}
+
